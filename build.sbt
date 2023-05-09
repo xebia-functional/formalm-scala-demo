@@ -10,4 +10,3 @@ lazy val root = (project in file("."))
     name := "FormaLM Example",
     libraryDependencies += munit % Test
   )
-  .enablePlugins(StainlessPlugin)
