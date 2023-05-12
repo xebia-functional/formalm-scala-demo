@@ -8,5 +8,9 @@ ThisBuild / organizationName := "example"
 lazy val root = (project in file("."))
   .settings(
     name := "FormaLM Example",
-    libraryDependencies += munit % Test
+    libraryDependencies += munit % Test,
+    semanticdbEnabled := true,
+    scalacOptions ++= List(
+      "-Wunused"
+    )
   )
