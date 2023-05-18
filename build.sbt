@@ -11,6 +11,6 @@ lazy val root = (project in file("."))
     libraryDependencies += munit % Test,
     semanticdbEnabled := true, // necessary atm
     scalacOptions ++= List(
-      "-Wunused"
+      "-Wunused" // necessary atm
     )
   )
