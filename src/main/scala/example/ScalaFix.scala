@@ -5,7 +5,7 @@ import scala.concurrent.Future
 final object ScalaFix {
   var x: Int = 0
   val y: String = null
-  val pimp = "text"
+  val aux = "text"
 
   def m(): Unit = {
     for {
