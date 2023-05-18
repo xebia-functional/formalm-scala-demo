@@ -9,7 +9,7 @@ lazy val root = (project in file("."))
   .settings(
     name := "FormaLM Example",
     libraryDependencies += munit % Test,
-    semanticdbEnabled := true,
+    semanticdbEnabled := true, // necessary atm
     scalacOptions ++= List(
       "-Wunused"
     )
