@@ -1,0 +1,64 @@
+name: Run FormaLM analysis project
+defaults:
+  run:
+    shell: bash
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+env:
+  GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+
+jobs:
+  check:
+    name: Check on ${{ matrix.os.runner }}
+    runs-on: ${{ matrix.os }}
+    container: ghcr.io/xebia-functional/formalm:main
+    permissions:
+      contents: read  #  to fetch code (actions/checkout)
+      packages: read  #  to fetch packages (docker)
+    defaults:
+      run:
+        shell: ${{ matrix.shell }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ ubuntu-latest ]
+        include:
+          - os: ubuntu-latest
+            shell: bash
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Restore native cache
+        id: cache-native
+        uses: actions/cache@v3
+        with:
+          path: |
+            scripts/build
+          key: ${{ runner.os }}-native-${{ hashFiles('./scripts/*') }}
+
+      - name: Restore Gradle cache
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+            ~/.gradle/yarn
+            ~/.gradle/nodejs
+            ~/.konan
+          key: ${{ runner.os }}-gradle-${{ hashFiles('/*.gradle*', '/gradle-wrapper.properties') }}
+          restore-keys: ${{ runner.os }}-gradle-
+      - name: Run FormaLM analysis
+        run: java -jar /home/gradle/formalm/formalm-0.0.1-SNAPSHOT.jar ${{ github.workspace }} report.sarif
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+        # Path to SARIF file relative to the root of the repository
+        sarif_file: report.sarif
+        # Optional category for the results
+        # Used to differentiate multiple results for one commit
+        #category: my-analysis-tool
+
