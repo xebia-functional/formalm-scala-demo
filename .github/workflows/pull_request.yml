@@ -30,6 +30,8 @@ jobs:
             shell: bash
     steps:
       - uses: actions/checkout@v2
+        with:
+          path: app
 
       - name: Restore native cache
         id: cache-native
@@ -52,8 +54,7 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('/*.gradle*', '/gradle-wrapper.properties') }}
           restore-keys: ${{ runner.os }}-gradle-
       - name: Run FormaLM analysis
-        working-directory: home/gradle/app
-        run: java -jar /home/gradle/formalm/formalm-0.0.1-SNAPSHOT.jar $GITHUB_WORKSPACE report.sarif
+        run: java -jar /home/gradle/formalm/formalm-0.0.1-SNAPSHOT.jar $GITHUB_WORKSPACE/app report.sarif
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v2
         with:
