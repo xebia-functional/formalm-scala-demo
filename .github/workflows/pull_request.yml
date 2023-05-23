@@ -52,12 +52,13 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('/*.gradle*', '/gradle-wrapper.properties') }}
           restore-keys: ${{ runner.os }}-gradle-
       - name: Run FormaLM analysis
+        working-directory: home/gradle/app
         run: java -jar /home/gradle/formalm/formalm-0.0.1-SNAPSHOT.jar $GITHUB_WORKSPACE report.sarif
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v2
         with:
         # Path to SARIF file relative to the root of the repository
-          sarif_file: report.sarif
+          sarif_file: home/gradle/app/report.sarif
         # Optional category for the results
         # Used to differentiate multiple results for one commit
         #category: my-analysis-tool
