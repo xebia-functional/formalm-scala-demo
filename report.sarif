@@ -14,7 +14,7 @@
                 },
                 "region": {
                   "snippet": {
-                    "text": "// 1. Test that the function compiles without errors\n               // Code snippet\ndef scalafixFun(): Unit = {\n    for {\n      n <- List(1, 2, 3)\n      val inc = n + 1\n    } yield inc\n}\n\n// Test\nassertCompiles(\"scalafixFun()\")  \n            \n// 2. Test that the function returns a List of Integers\n               // Code snippet\ndef scalafixFun(): List[Int] = {\n    for {\n      n <- List(1, 2, 3)\n      val inc = n + 1\n    } yield inc\n}\n\n// Test\nassert(scalafixFun().isInstanceOf[List[Int]])  \n            \n// 3. Test that the function returns the expected List of Integers\n               // Code snippet\ndef scalafixFun(): List[Int] = {\n    for {\n      n <- List(1, 2, 3)\n      val inc = n + 1\n    } yield inc\n}\n\n// Test\nassert(scalafixFun() == List(2, 3, 4))  \n            "
+                    "text": "// 1. Test that the function compiles without errors\n ```scala def scalafixFun(): Unit```"
                   },
                   "startColumn": 181,
                   "startLine": 12
