@@ -17,7 +17,8 @@
                     "text": "// 1. Test that the function compiles without errors\n ```scala def scalafixFun(): Unit```"
                   },
                   "startColumn": 11,
-                  "startLine": 5
+                  "startLine": 5,
+                  "sourceLanguage": "scala"
                 }
               }
             }
@@ -25,7 +26,8 @@
           "message": {
             "text": "// 1. Test that the function compiles without errors\n ```scala def scalafixFun(): Unit```"
           },
-          "ruleId": "test-coverage"
+          "ruleId": "test-coverage",
+          "baselineState": "unchanged"
         }
       ],
       "tool": {
