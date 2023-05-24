@@ -25,7 +25,7 @@
           "message": {
             "text": "There are some tests that can be written for this code"
           },
-          "ruleId": "FormaLM-SCoverage-AI"
+          "ruleId": "test-coverage"
         },
         {
           "level": "note",
@@ -48,7 +48,7 @@
           "message": {
             "text": "There are some tests that can be written for this code"
           },
-          "ruleId": "FormaLM-SCoverage-AI"
+          "ruleId": "test-coverage"
         },
         {
           "level": "note",
@@ -71,7 +71,7 @@
           "message": {
             "text": "There are some tests that can be written for this code"
           },
-          "ruleId": "FormaLM-SCoverage-AI"
+          "ruleId": "test-coverage"
         },
         {
           "level": "note",
@@ -94,7 +94,7 @@
           "message": {
             "text": "There are some tests that can be written for this code"
           },
-          "ruleId": "FormaLM-SCoverage-AI"
+          "ruleId": "test-coverage"
         },
         {
           "level": "note",
@@ -117,7 +117,7 @@
           "message": {
             "text": "There are some tests that can be written for this code"
           },
-          "ruleId": "FormaLM-SCoverage-AI"
+          "ruleId": "test-coverage"
         }
       ],
       "tool": {
@@ -127,6 +127,9 @@
           "name": "Formalm",
           "organization": "Xebia Functional",
           "rules": [
+            {
+              "id": "test-coverage"
+            }
           ],
           "version": "0.0.1"
         }
