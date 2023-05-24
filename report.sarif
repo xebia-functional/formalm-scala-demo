@@ -8,6 +8,10 @@
           "level": "warning",
           "locations": [
             {
+              "message": {
+                "text": "```scala\ndef fun(){}\n```",
+                "markdown": "```scala\ndef fun(){}\n```"
+              },
               "physicalLocation": {
                 "artifactLocation": {
                   "uri": "src/main/scala/example/ScoverageTest.scala"
@@ -15,7 +19,7 @@
                 "region": {
                   "message": {
                     "text": "Ajá",
-                    "markdown": "```scala\ndef fun(){}\n```"
+                    "markdown": "```scala\ndef fun2(){}\n```"
                   },
                   "startColumn": 1,
                   "startLine": 14,
@@ -25,7 +29,7 @@
             }
           ],
           "message": {
-            "text": "There are some tests that can be written for this code \n a vé... si esto sale o no"
+            "text": "There are some tests that can be written for this code"
           },
           "ruleId": "test-coverage",
           "baselineState": "new",
