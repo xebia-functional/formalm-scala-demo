@@ -16,107 +16,14 @@
                   "snippet": {
                     "text": "// 1. Test that the function compiles without errors\n ```scala def scalafixFun(): Unit```"
                   },
-                  "startColumn": 181,
-                  "startLine": 12
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "// 1. Test that the function compiles without errors\n ```scala def scalafixFun(): Unit```"
-          },
-          "ruleId": "test-coverage"
-        },
-        {
-          "level": "note",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "src/main/scala/example/Example.scala"
-                },
-                "region": {
-                  "snippet": {
-                    "text": "// 1. Test that the function returns the correct output when given a positive integer input\n               assert(ambrosia(5) == 6)  \n            \n// 2. Test that the function returns the correct output when given a zero input\n               assert(ambrosia(0) == 1)  \n            \n// 3. Test that the function throws an exception when given a negative integer input\n               assertThrows[IllegalArgumentException] {\n  ambrosia(-1)\n}  \n            \n// 4. Test that the function satisfies the ensuring clause when given a positive integer input\n               assert(ambrosia(10) >= 10)  \n            \n// 5. Test that the function satisfies the ensuring clause when given a zero input\n               assert(ambrosia(0) >= 0)  \n            "
-                  },
-                  "startColumn": 70,
+                  "startColumn": 11,
                   "startLine": 5
                 }
               }
             }
           ],
           "message": {
-            "text": "There are some tests that can be written for this code"
-          },
-          "ruleId": "test-coverage"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "src/main/scala/example/Example.scala"
-                },
-                "region": {
-                  "snippet": {
-                    "text": "// Tests:\n                 \n            \n// 1. Test that the function \"ejemplo\" returns an integer value\n                 \n            \n// 2. Test that the function \"ambrosia\" is called with a negative integer argument\n\nCode snippets:\n                 \n            \n// 1.\n               val result = ejemplo\nassert(result.isInstanceOf[Int])  \n            \n// 2.\n               val mockAmbrosia = mockFunction[Int, Int]\nmockAmbrosia.expects(-1)\nejemplo  \n            "
-                  },
-                  "startColumn": 157,
-                  "startLine": 10
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "There are some tests that can be written for this code"
-          },
-          "ruleId": "test-coverage"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "src/main/scala/example/ScalaFix2.scala"
-                },
-                "region": {
-                  "snippet": {
-                    "text": "// 1. Test that the method m2 is called\n               // Arrange\nval mockedObject = mock[SomeClass]\n\n// Act\nmockedObject.m2()\n\n// Assert\nverify(mockedObject, times(1)).m2()  \n            \n// 2. Test that the method m2 prints \"Foo\" to the console\n               // Arrange\nval outContent = new ByteArrayOutputStream()\nSystem.setOut(new PrintStream(outContent))\n\n// Act\nSomeClass.m2()\n\n// Assert\nassertEquals(\"Foo\\n\", outContent.toString())  \n            "
-                  },
-                  "startColumn": 110,
-                  "startLine": 10
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "There are some tests that can be written for this code"
-          },
-          "ruleId": "test-coverage",
-          "ruleIndex": 0
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "src/main/scala/other/example/FunctionsWithStrings.scala"
-                },
-                "region": {
-                  "snippet": {
-                    "text": "// 1. Test that the function returns an empty string when given an empty list\n               val input: List[String] = List()\nassert(findShortestString(input) == \"\")  \n            \n// 2. Test that the function returns the shortest string in a list of strings\n               val input: List[String] = List(\"hello\", \"world\", \"hi\")\nassert(findShortestString(input) == \"hi\")  \n            \n// 3. Test that the function returns the first shortest string in a list of strings with multiple shortest strings\n               val input: List[String] = List(\"hello\", \"world\", \"hi\", \"yo\")\nassert(findShortestString(input) == \"hi\")  \n            "
-                  },
-                  "startColumn": 302,
-                  "startLine": 15
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "There are some tests that can be written for this code"
+            "text": "// 1. Test that the function compiles without errors\n ```scala def scalafixFun(): Unit```"
           },
           "ruleId": "test-coverage"
         }
