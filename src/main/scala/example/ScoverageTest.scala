@@ -10,3 +10,7 @@ def myDummyFun(): Unit = {
 def myOtherFun(): Unit = {
   print("Hello World!")
 }
+
+def myThirdFun(): Unit = {
+  print("Hello World!")
+}

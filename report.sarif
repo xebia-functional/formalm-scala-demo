@@ -14,10 +14,10 @@
                 },
                 "region": {
                   "message": {
-                    "text": "// 1. Test that the function compiles without errors\n ```scala def scalafixFun(): Unit```"
+                    "text": "Ajá"
                   },
                   "startColumn": 1,
-                  "startLine": 10,
+                  "startLine": 14,
                   "sourceLanguage": "scala"
                 }
               }
@@ -26,7 +26,27 @@
           "message": {
             "text": "// 1. Test that the function compiles without errors\n ```scala def scalafixFun(): Unit```"
           },
-          "ruleId": "test-coverage"
+          "ruleId": "test-coverage",
+          "fixes": [
+            {
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "src/main/scala/example/ScoverageTest.scala"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startColumn": 1,
+                        "startLine": 14
+                      },
+                      "insertedContent": "def scalafixFun(): Unit = { println(\"Ajá\") }"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "tool": {
