@@ -23,7 +23,7 @@
             }
           ],
           "message": {
-            "text": "There are some tests that can be written for this code"
+            "text": "// 1. Test that the function compiles without errors\n               // Code snippet\ndef scalafixFun(): Unit = {\n    for {\n      n <- List(1, 2, 3)\n      val inc = n + 1\n    } yield inc\n}\n\n// Test\nassertCompiles(\"scalafixFun()\")  \n            \n// 2. Test that the function returns a List of Integers\n               // Code snippet\ndef scalafixFun(): List[Int] = {\n    for {\n      n <- List(1, 2, 3)\n      val inc = n + 1\n    } yield inc\n}\n\n// Test\nassert(scalafixFun().isInstanceOf[List[Int]])  \n            \n// 3. Test that the function returns the expected List of Integers\n               // Code snippet\ndef scalafixFun(): List[Int] = {\n    for {\n      n <- List(1, 2, 3)\n      val inc = n + 1\n    } yield inc\n}\n\n// Test\nassert(scalafixFun() == List(2, 3, 4))  \n            "
           },
           "ruleId": "test-coverage"
         },
@@ -94,7 +94,8 @@
           "message": {
             "text": "There are some tests that can be written for this code"
           },
-          "ruleId": "test-coverage"
+          "ruleId": "test-coverage",
+          "ruleIndex": 0
         },
         {
           "level": "warning",
@@ -128,7 +129,13 @@
           "organization": "Xebia Functional",
           "rules": [
             {
-              "id": "test-coverage"
+              "id": "test-coverage",
+              "properties": {
+                "tags": [
+                  "maintainability"
+                ],
+                "precision": "very-high"
+              }
             }
           ],
           "version": "0.0.1"
