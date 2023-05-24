@@ -10,7 +10,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "src/main/scala/example/ScalaFix.scala"
+                  "uri": "src/main/scala/example/Hello.scala"
                 },
                 "region": {
                   "snippet": {
