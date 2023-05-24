@@ -61,7 +61,7 @@ jobs:
         uses: github/codeql-action/upload-sarif@v2
         with:
           # Path to SARIF file relative to the root of the repository
-          sarif_file: home/gradle/report.sarif
+          sarif_file: /home/gradle/report.sarif
           # Optional category for the results
           # Used to differentiate multiple results for one commit
           #category: my-analysis-tool
