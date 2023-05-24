@@ -24,11 +24,14 @@
             }
           ],
           "message": {
-            "text": "// 1. Test that the function compiles without errors\n ```scala def scalafixFun(): Unit```"
+            "text": "There are some tests that can be written for this code"
           },
           "ruleId": "test-coverage",
           "fixes": [
             {
+              "description": {
+                "text": "Add a test for this code"
+              },
               "artifactChanges": [
                 {
                   "artifactLocation": {
