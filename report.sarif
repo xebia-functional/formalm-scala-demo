@@ -40,7 +40,9 @@
                         "startColumn": 1,
                         "startLine": 14
                       },
-                      "insertedContent": "def scalafixFun(): Unit = { println(\"Ajá\") }"
+                      "insertedContent": {
+                        "text": "def scalafixFun(): Unit = { println(\"Ajá\") }"
+                      }
                     }
                   ]
                 }
