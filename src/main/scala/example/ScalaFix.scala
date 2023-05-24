@@ -7,7 +7,7 @@ final object ScalaFix {
   val y: String = null
   val aux = "text"
 
-  def m(): Unit = {
+  def scalafixFun(): Unit = {
     for {
       n <- List(1, 2, 3)
       val inc = n + 1
