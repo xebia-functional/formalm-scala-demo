@@ -54,7 +54,7 @@ jobs:
       - name: Ls
         run: pwd
       - name: Run FormaLM analysis
-        run: java -jar /home/gradle/formalm/formalm-0.0.1-SNAPSHOT.jar . report.sarif
+        run: java -jar /home/gradle/formalm/formalm-0.0.1-SNAPSHOT.jar $GITHUB_WORKSPACE /home/gradle/test report.sarif
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v2
         with:
