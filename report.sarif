@@ -5,7 +5,7 @@
     {
       "results": [
         {
-          "level": "note",
+          "level": "warning",
           "locations": [
             {
               "physicalLocation": {
@@ -51,7 +51,7 @@
           "ruleId": "test-coverage"
         },
         {
-          "level": "note",
+          "level": "warning",
           "locations": [
             {
               "physicalLocation": {
@@ -74,7 +74,7 @@
           "ruleId": "test-coverage"
         },
         {
-          "level": "note",
+          "level": "warning",
           "locations": [
             {
               "physicalLocation": {
@@ -97,7 +97,7 @@
           "ruleId": "test-coverage"
         },
         {
-          "level": "note",
+          "level": "recommendation",
           "locations": [
             {
               "physicalLocation": {
