@@ -14,7 +14,8 @@
                 },
                 "region": {
                   "message": {
-                    "text": "Ajá"
+                    "text": "Ajá",
+                    "markdown": "```scala\ndef fun(){}\n```"
                   },
                   "startColumn": 1,
                   "startLine": 14,
@@ -27,6 +28,7 @@
             "text": "There are some tests that can be written for this code"
           },
           "ruleId": "test-coverage",
+          "baselineState": "new",
           "fixes": [
             {
               "description": {
