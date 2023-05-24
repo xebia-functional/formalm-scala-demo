@@ -55,6 +55,8 @@ jobs:
         run: echo "OPENAI_TOKEN=${{ secrets.OPENAI_TOKEN }} " >> $GITHUB_ENV
       - name: Run FormaLM analysis
         run: java -jar /home/gradle/formalm/formalm-0.0.1-SNAPSHOT.jar $GITHUB_WORKSPACE /home/gradle/test /home/gradle/report.sarif
+      - name: Show SARIF file
+        run: cat /home/gradle/report.sarif
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v2
         with:
