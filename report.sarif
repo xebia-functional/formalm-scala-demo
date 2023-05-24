@@ -13,11 +13,11 @@
                   "uri": "src/main/scala/example/ScoverageTest.scala"
                 },
                 "region": {
-                  "snippet": {
+                  "message": {
                     "text": "// 1. Test that the function compiles without errors\n ```scala def scalafixFun(): Unit```"
                   },
                   "startColumn": 1,
-                  "startLine": 3,
+                  "startLine": 10,
                   "sourceLanguage": "scala"
                 }
               }

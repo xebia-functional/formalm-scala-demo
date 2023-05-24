@@ -6,3 +6,7 @@ def myDummyFun(): Unit = {
     inc = n + 1
   } yield inc
 }
+
+def myOtherFun(): Unit = {
+  print("Hello World!")
+}
