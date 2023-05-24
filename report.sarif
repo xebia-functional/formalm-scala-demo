@@ -10,14 +10,14 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "src/main/scala/example/Hello.scala"
+                  "uri": "src/main/scala/example/ScoverageTest.scala"
                 },
                 "region": {
                   "snippet": {
                     "text": "// 1. Test that the function compiles without errors\n ```scala def scalafixFun(): Unit```"
                   },
-                  "startColumn": 11,
-                  "startLine": 5,
+                  "startColumn": 1,
+                  "startLine": 3,
                   "sourceLanguage": "scala"
                 }
               }
@@ -26,8 +26,7 @@
           "message": {
             "text": "// 1. Test that the function compiles without errors\n ```scala def scalafixFun(): Unit```"
           },
-          "ruleId": "test-coverage",
-          "baselineState": "unchanged"
+          "ruleId": "test-coverage"
         }
       ],
       "tool": {
