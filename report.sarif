@@ -25,7 +25,7 @@
             }
           ],
           "message": {
-            "text": "There are some tests that can be written for this code"
+            "text": "There are some tests that can be written for this code \n a vé... si esto sale o no"
           },
           "ruleId": "test-coverage",
           "baselineState": "new",
