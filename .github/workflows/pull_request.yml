@@ -14,7 +14,7 @@ jobs:
   check:
     name: Check on ${{ matrix.os.runner }}
     runs-on: ${{ matrix.os }}
-    container: ghcr.io/xebia-functional/formalm:main
+    container: ghcr.io/xebia-functional/formalm:update-cli
     permissions:
       contents: read  #  to fetch code (actions/checkout)
       packages: read  #  to fetch packages (docker)
@@ -54,12 +54,12 @@ jobs:
       - name: Sbt
         run: sbt
       - name: Run FormaLM analysis
-        run: java -jar /home/gradle/formalm/formalm-0.0.1-SNAPSHOT.jar $GITHUB_WORKSPACE /home/gradle/test report.sarif
+        run: java -jar /home/gradle/formalm/formalm-0.0.1-SNAPSHOT.jar $GITHUB_WORKSPACE /home/gradle/test /home/gradle/report.sarif
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v2
         with:
         # Path to SARIF file relative to the root of the repository
-          sarif_file: home/gradle/app/report.sarif
+          sarif_file: home/gradle/report.sarif
         # Optional category for the results
         # Used to differentiate multiple results for one commit
         #category: my-analysis-tool
