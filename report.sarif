@@ -97,7 +97,7 @@
           "ruleId": "test-coverage"
         },
         {
-          "level": "recommendation",
+          "level": "warning",
           "locations": [
             {
               "physicalLocation": {
