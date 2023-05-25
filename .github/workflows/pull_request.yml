@@ -11,10 +11,10 @@ env:
   GRADLE_OPTS: "-Dorg.gradle.daemon=false"
 
 jobs:
-  check:
+  check1:
     name: Check on ${{ matrix.os.runner }}
     runs-on: ${{ matrix.os }}
-    container: ghcr.io/xebia-functional/formalm:update-cli
+    container: ghcr.io/xebia-functional/formalm:main
     permissions:
       contents: read  #  to fetch code (actions/checkout)
       packages: read  #  to fetch packages (docker)
@@ -53,15 +53,15 @@ jobs:
           restore-keys: ${{ runner.os }}-gradle-
       - name: Setup OPENAI token
         run: echo "OPENAI_TOKEN=${{ secrets.OPENAI_TOKEN }} " >> $GITHUB_ENV
-#      - name: Run FormaLM analysis
-#        run: java -jar /home/gradle/formalm/formalm-0.0.1-SNAPSHOT.jar $GITHUB_WORKSPACE /home/gradle/test /home/gradle/report.sarif
+      - name: Run FormaLM analysis
+        run: java -jar /home/gradle/formalm/formalm-0.0.1-SNAPSHOT.jar $GITHUB_WORKSPACE /home/gradle/report.sarif
       - name: Show SARIF file
-        run: cat report.sarif #/home/gradle/report.sarif
+        run: cat /home/gradle/report.sarif
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v2
         with:
           # Path to SARIF file relative to the root of the repository
-          sarif_file: report.sarif
+          sarif_file: /home/gradle/report.sarif
           # Optional category for the results
           # Used to differentiate multiple results for one commit
           #category: my-analysis-tool
