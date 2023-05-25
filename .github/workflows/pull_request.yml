@@ -11,10 +11,10 @@ env:
   GRADLE_OPTS: "-Dorg.gradle.daemon=false"
 
 jobs:
-  check:
+  check1:
     name: Check on ${{ matrix.os.runner }}
     runs-on: ${{ matrix.os }}
-    container: ghcr.io/xebia-functional/formalm:update-cli
+    container: ghcr.io/xebia-functional/formalm:main
     permissions:
       contents: read  #  to fetch code (actions/checkout)
       packages: read  #  to fetch packages (docker)
