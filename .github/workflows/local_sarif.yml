@@ -6,7 +6,7 @@ defaults:
 on:
   pull_request:
     branches:
-      - 'sarif/*'
+      - 'testing-sarif'
   workflow_dispatch:
 
 env:
