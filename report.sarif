@@ -1,0 +1,121 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "fixes": [
+            {
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "description": {
+                      "text": "Using var creates mutable state which can lead to unexpected behavior and bugs. Changing it to val ensures that the variable is immutable."
+                    }
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "snippet": {
+                          "text": "var x: Int = 0"
+                        },
+                        "startColumn": 3,
+                        "startLine": 6
+                      },
+                      "insertedContent": {
+                        "text": "val x: Int = 0"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/src/main/scala/example/ScalaFix.scala"
+                },
+                "region": {
+                  "snippet": {
+                    "text": "var x: Int = 0"
+                  },
+                  "startColumn": 3,
+                  "startLine": 6
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "mutable state should be avoided"
+          },
+          "ruleId": "FormaLM-Scalafix-AI"
+        },
+        {
+          "fixes": [
+            {
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "description": {
+                      "text": "Using null can lead to NullPointerExceptions and other bugs. Using Option ensures that the variable is either Some(value) or None, making it clear that it may not have a value."
+                    }
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "snippet": {
+                          "text": "val y: String = null"
+                        },
+                        "startColumn": 19,
+                        "startLine": 7
+                      },
+                      "insertedContent": {
+                        "text": "val y: Option[String] = None"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/src/main/scala/example/ScalaFix.scala"
+                },
+                "region": {
+                  "snippet": {
+                    "text": "val y: String = null"
+                  },
+                  "startColumn": 19,
+                  "startLine": 7
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "null should be avoided, consider using Option instead"
+          },
+          "ruleId": "FormaLM-Scalafix-AI"
+        }
+      ],
+      "tool": {
+        "driver": {
+          "fullName": "Formalm",
+          "language": "en",
+          "name": "Formalm",
+          "organization": "Xebia Functional",
+          "rules": [
+          ],
+          "version": "0.0.1"
+        }
+      }
+    }
+  ]
+}
