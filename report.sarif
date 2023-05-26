@@ -25,7 +25,7 @@
           "message": {
             "text": "mutable state should be avoided"
           },
-          "ruleId": "39d2cc27-1a5b-402c-b8aa-9d844aa24ce8"
+          "ruleId": "9e41dd6a-e3dc-4911-9a7d-3f78804098ff"
         },
         {
           "level": "error",
@@ -48,7 +48,7 @@
           "message": {
             "text": "null should be avoided, consider using Option instead"
           },
-          "ruleId": "76c16e04-63ac-4325-9aab-dd0cd57c765b"
+          "ruleId": "e9a8a3be-f621-4cf4-8c7c-016d14d13961"
         }
       ],
       "tool": {
@@ -60,19 +60,25 @@
           "rules": [
             {
               "help": {
-                "markdown": "```scala\nval x: Int = 0\n```",
+                "markdown": "### Explanation\nUsing var makes the variable mutable which can lead to unexpected behavior. Changing it to val makes it immutable.\n\n### Fixed code\n```scala\nval x: Int = 0\n```",
                 "text": "Using var makes the variable mutable which can lead to unexpected behavior. Changing it to val makes it immutable."
               },
-              "id": "39d2cc27-1a5b-402c-b8aa-9d844aa24ce8",
-              "name": "Error in file /src/main/scala/example/ScalaFix.scala"
+              "id": "9e41dd6a-e3dc-4911-9a7d-3f78804098ff",
+              "name": "Error in file /src/main/scala/example/ScalaFix.scala",
+              "shortDescription": {
+                "text": "mutable state should be avoided"
+              }
             },
             {
               "help": {
-                "markdown": "```scala\nval y: Option[String] = None\n```",
+                "markdown": "### Explanation\nUsing null can lead to NullPointerExceptions. Using Option instead ensures that the value is either Some(value) or None.\n\n### Fixed code\n```scala\nval y: Option[String] = None\n```",
                 "text": "Using null can lead to NullPointerExceptions. Using Option instead ensures that the value is either Some(value) or None."
               },
-              "id": "76c16e04-63ac-4325-9aab-dd0cd57c765b",
-              "name": "Error in file /src/main/scala/example/ScalaFix.scala"
+              "id": "e9a8a3be-f621-4cf4-8c7c-016d14d13961",
+              "name": "Error in file /src/main/scala/example/ScalaFix.scala",
+              "shortDescription": {
+                "text": "null should be avoided, consider using Option instead"
+              }
             }
           ],
           "version": "0.0.1"
