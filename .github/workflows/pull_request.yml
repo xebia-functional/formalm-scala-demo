@@ -5,6 +5,8 @@ defaults:
 
 on:
   pull_request:
+    branches-ignore:
+      - 'sarif/*'
   workflow_dispatch:
 
 env:

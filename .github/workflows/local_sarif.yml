@@ -1,0 +1,36 @@
+name: Parse a local Sarif in GitHub Code Scanning
+defaults:
+  run:
+    shell: bash
+
+on:
+  workflow_dispatch:
+
+env:
+  GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+
+jobs:
+  check:
+    name: Check on ${{ matrix.os.runner }}
+    runs-on: ${{ matrix.os }}
+    container: ghcr.io/xebia-functional/formalm:main
+    permissions:
+      contents: read  #  to fetch code (actions/checkout)
+      packages: read  #  to fetch packages (docker)
+    defaults:
+      run:
+        shell: ${{ matrix.shell }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ ubuntu-latest ]
+        include:
+          - os: ubuntu-latest
+            shell: bash
+    steps:
+      - uses: actions/checkout@v2
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          # Path to SARIF file relative to the root of the repository
+          sarif_file: report.sarif
