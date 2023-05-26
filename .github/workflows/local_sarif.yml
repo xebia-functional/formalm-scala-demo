@@ -4,6 +4,9 @@ defaults:
     shell: bash
 
 on:
+  pull_request:
+    branches:
+      - 'sarif/*'
   workflow_dispatch:
 
 env:
