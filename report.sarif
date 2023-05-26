@@ -1,0 +1,133 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "baselineState": "new",
+          "fixes": [
+            {
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "src/main/scala/example/ScalaFix.scala"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startColumn": 108,
+                        "startLine": 7
+                      },
+                      "insertedContent": {
+                        "text": "// 1. Test: Check if variable y is null\n               assert(y == null)  \n            \n// 2. Test: Check if variable y is not empty\n               assert(y != \"\")  \n            \n// 3. Test: Check if variable y is of type String\n               assert(y.isInstanceOf[String])  \n            "
+                      }
+                    }
+                  ]
+                }
+              ],
+              "description": {
+                "text": "Add tests"
+              }
+            }
+          ],
+          "level": "note",
+          "locations": [
+            {
+              "message": {
+                "text": "// 1. Test: Check if variable y is null\n               assert(y == null)  \n            \n// 2. Test: Check if variable y is not empty\n               assert(y != \"\")  \n            \n// 3. Test: Check if variable y is of type String\n               assert(y.isInstanceOf[String])  \n            "
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/scala/example/ScalaFix.scala"
+                },
+                "region": {
+                  "snippet": {
+                    "text": "// 1. Test: Check if variable y is null\n               assert(y == null)  \n            \n// 2. Test: Check if variable y is not empty\n               assert(y != \"\")  \n            \n// 3. Test: Check if variable y is of type String\n               assert(y.isInstanceOf[String])  \n            "
+                  },
+                  "startColumn": 108,
+                  "startLine": 7
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "There are some tests that can be written for this code."
+          },
+          "ruleId": "test-coverage"
+        },
+        {
+          "baselineState": "new",
+          "fixes": [
+            {
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "src/main/scala/example/ScalaFix.scala"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startColumn": 88,
+                        "startLine": 6
+                      },
+                      "insertedContent": {
+                        "text": "// 1. Test that variable x is initialized to 0\n               assert(x == 0)  \n            \n// 2. Test that variable x can be assigned a new value\n               x = 5\nassert(x == 5)  \n            \n// 3. Test that variable x cannot be assigned a non-integer value\n               assertDoesNotCompile(\"x = \\\"hello\\\"\")  \n            "
+                      }
+                    }
+                  ]
+                }
+              ],
+              "description": {
+                "text": "Add tests"
+              }
+            }
+          ],
+          "level": "note",
+          "locations": [
+            {
+              "message": {
+                "text": "// 1. Test that variable x is initialized to 0\n               assert(x == 0)  \n            \n// 2. Test that variable x can be assigned a new value\n               x = 5\nassert(x == 5)  \n            \n// 3. Test that variable x cannot be assigned a non-integer value\n               assertDoesNotCompile(\"x = \\\"hello\\\"\")  \n            "
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/scala/example/ScalaFix.scala"
+                },
+                "region": {
+                  "snippet": {
+                    "text": "// 1. Test that variable x is initialized to 0\n               assert(x == 0)  \n            \n// 2. Test that variable x can be assigned a new value\n               x = 5\nassert(x == 5)  \n            \n// 3. Test that variable x cannot be assigned a non-integer value\n               assertDoesNotCompile(\"x = \\\"hello\\\"\")  \n            "
+                  },
+                  "startColumn": 88,
+                  "startLine": 6
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "There are some tests that can be written for this code."
+          },
+          "ruleId": "test-coverage-81"
+        }
+      ],
+      "tool": {
+        "driver": {
+          "fullName": "Formalm",
+          "language": "en",
+          "name": "Formalm",
+          "organization": "Xebia Functional",
+          "rules": [
+            {
+              "id": "test-coverage-81",
+              "name": "Test Coverage",
+              "help": {
+                "text": "This rule checks if the code has been tested for all possible scenarios.",
+                "markdown": "// 1. Test that variable x is initialized to 0\\n               assert(x == 0)  \\n            \\n// 2. Test that variable x can be assigned a new value\\n               x = 5\\nassert(x == 5)  \\n            \\n// 3. Test that variable x cannot be assigned a non-integer value\\n               assertDoesNotCompile(\\\"x = \\\\\\\"hello\\\\\\\"\\\")  \\n            \""
+              }
+            }
+          ],
+          "version": "0.0.1"
+        }
+      }
+    }
+  ]
+}
