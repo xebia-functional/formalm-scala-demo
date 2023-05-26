@@ -36,6 +36,18 @@ jobs:
           path: |
             scripts/build
           key: ${{ runner.os }}-native-${{ hashFiles('./scripts/*') }}
+      - name: Restore Gradle cache
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+            ~/.gradle/yarn
+            ~/.gradle/nodejs
+            ~/.konan
+          key: ${{ runner.os }}-gradle-${{ hashFiles('/*.gradle*', '/gradle-wrapper.properties') }}
+          restore-keys: ${{ runner.os }}-gradle-
       - name: Show SARIF
         run: cat report.sarif
       - name: Upload SARIF file
