@@ -5,33 +5,6 @@
     {
       "results": [
         {
-          "fixes": [
-            {
-              "artifactChanges": [
-                {
-                  "artifactLocation": {
-                    "description": {
-                      "text": "Using var creates mutable state which can lead to unexpected behavior and bugs. Changing it to val ensures that the variable is immutable."
-                    }
-                  },
-                  "replacements": [
-                    {
-                      "deletedRegion": {
-                        "snippet": {
-                          "text": "var x: Int = 0"
-                        },
-                        "startColumn": 3,
-                        "startLine": 6
-                      },
-                      "insertedContent": {
-                        "text": "val x: Int = 0"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
           "level": "error",
           "locations": [
             {
@@ -52,36 +25,9 @@
           "message": {
             "text": "mutable state should be avoided"
           },
-          "ruleId": "FormaLM-Scalafix-AI"
+          "ruleId": "39d2cc27-1a5b-402c-b8aa-9d844aa24ce8"
         },
         {
-          "fixes": [
-            {
-              "artifactChanges": [
-                {
-                  "artifactLocation": {
-                    "description": {
-                      "text": "Using null can lead to NullPointerExceptions and other bugs. Using Option ensures that the variable is either Some(value) or None, making it clear that it may not have a value."
-                    }
-                  },
-                  "replacements": [
-                    {
-                      "deletedRegion": {
-                        "snippet": {
-                          "text": "val y: String = null"
-                        },
-                        "startColumn": 19,
-                        "startLine": 7
-                      },
-                      "insertedContent": {
-                        "text": "val y: Option[String] = None"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
           "level": "error",
           "locations": [
             {
@@ -102,7 +48,7 @@
           "message": {
             "text": "null should be avoided, consider using Option instead"
           },
-          "ruleId": "FormaLM-Scalafix-AI"
+          "ruleId": "76c16e04-63ac-4325-9aab-dd0cd57c765b"
         }
       ],
       "tool": {
@@ -112,6 +58,22 @@
           "name": "Formalm",
           "organization": "Xebia Functional",
           "rules": [
+            {
+              "help": {
+                "markdown": "```scala\nval x: Int = 0\n```",
+                "text": "Using var makes the variable mutable which can lead to unexpected behavior. Changing it to val makes it immutable."
+              },
+              "id": "39d2cc27-1a5b-402c-b8aa-9d844aa24ce8",
+              "name": "Error in file /src/main/scala/example/ScalaFix.scala"
+            },
+            {
+              "help": {
+                "markdown": "```scala\nval y: Option[String] = None\n```",
+                "text": "Using null can lead to NullPointerExceptions. Using Option instead ensures that the value is either Some(value) or None."
+              },
+              "id": "76c16e04-63ac-4325-9aab-dd0cd57c765b",
+              "name": "Error in file /src/main/scala/example/ScalaFix.scala"
+            }
           ],
           "version": "0.0.1"
         }
