@@ -121,7 +121,7 @@
               "name": "Test Coverage",
               "help": {
                 "text": "This rule checks if the code has been tested for all possible scenarios.",
-                "markdown": "```scala // 1. Test that variable x is initialized to 0\\n               assert(x == 0)  \\n            \\n// 2. Test that variable x can be assigned a new value\\n               x = 5\\nassert(x == 5)  \\n            \\n// 3. Test that variable x cannot be assigned a non-integer value\\n               assertDoesNotCompile(\\\"x = \\\\\\\"hello\\\\\\\"\\\")  \\n            \"```"
+                "markdown": "```scala\n// This is a comment\nval x = 1\nassert(x == 1)\n```"
               }
             }
           ],
