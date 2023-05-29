@@ -11,68 +11,16 @@
               "artifactChanges": [
                 {
                   "artifactLocation": {
-                    "uri": "src/main/scala/example/ScalaFix.scala"
+                    "uri": "src/main/scala/Main.scala"
                   },
                   "replacements": [
                     {
                       "deletedRegion": {
-                        "startColumn": 171,
-                        "startLine": 12
-                      },
-                      "insertedContent": {
-                        "text": "// 1. Test: Check if the function `m` returns a list with the expected values\n               val result = m()\nassert(result == List(2, 3, 4))  \n            \n// 2. Test: Check if the function `m` returns a list with the same length as the input list\n               val input = List(1, 2, 3)\nval result = m()\nassert(result.length == input.length)  \n            \n// 3. Test: Check if the function `m` returns an empty list when the input list is empty\n               val input = List.empty[Int]\nval result = m()\nassert(result.isEmpty)  \n            \n// 4. Test: Check if the function `m` returns a list with the expected values when the input list contains negative numbers\n               val input = List(-1, -2, -3)\nval result = m()\nassert(result == List(0, -1, -2))  \n            "
-                      }
-                    }
-                  ]
-                }
-              ],
-              "description": {
-                "text": "Add tests"
-              }
-            }
-          ],
-          "level": "note",
-          "locations": [
-            {
-              "message": {
-                "text": "// 1. Test: Check if the function `m` returns a list with the expected values\n               val result = m()\nassert(result == List(2, 3, 4))  \n            \n// 2. Test: Check if the function `m` returns a list with the same length as the input list\n               val input = List(1, 2, 3)\nval result = m()\nassert(result.length == input.length)  \n            \n// 3. Test: Check if the function `m` returns an empty list when the input list is empty\n               val input = List.empty[Int]\nval result = m()\nassert(result.isEmpty)  \n            \n// 4. Test: Check if the function `m` returns a list with the expected values when the input list contains negative numbers\n               val input = List(-1, -2, -3)\nval result = m()\nassert(result == List(0, -1, -2))  \n            "
-              },
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "src/main/scala/example/ScalaFix.scala"
-                },
-                "region": {
-                  "snippet": {
-                    "text": "// 1. Test: Check if the function `m` returns a list with the expected values\n               val result = m()\nassert(result == List(2, 3, 4))  \n            \n// 2. Test: Check if the function `m` returns a list with the same length as the input list\n               val input = List(1, 2, 3)\nval result = m()\nassert(result.length == input.length)  \n            \n// 3. Test: Check if the function `m` returns an empty list when the input list is empty\n               val input = List.empty[Int]\nval result = m()\nassert(result.isEmpty)  \n            \n// 4. Test: Check if the function `m` returns a list with the expected values when the input list contains negative numbers\n               val input = List(-1, -2, -3)\nval result = m()\nassert(result == List(0, -1, -2))  \n            "
-                  },
-                  "startColumn": 171,
-                  "startLine": 12
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "Coverage report can be improved"
-          },
-          "ruleId": "a0487c67-69fe-400a-9336-350512134a36"
-        },
-        {
-          "baselineState": "new",
-          "fixes": [
-            {
-              "artifactChanges": [
-                {
-                  "artifactLocation": {
-                    "uri": "src/main/scala/example/Example.scala"
-                  },
-                  "replacements": [
-                    {
-                      "deletedRegion": {
-                        "startColumn": 70,
+                        "startColumn": 151,
                         "startLine": 5
                       },
                       "insertedContent": {
-                        "text": "// 1. Test that the function ambrosia returns the correct output when given a positive integer input.\n               assert(ambrosia(5) == 6)  \n            \n// 2. Test that the function ambrosia throws an IllegalArgumentException when given a negative integer input.\n               assertThrows[IllegalArgumentException] {\n  ambrosia(-5)\n}  \n            \n// 3. Test that the function ambrosia returns the correct output when given a zero input.\n               assert(ambrosia(0) == 1)  \n            "
+                        "text": ""
                       }
                     }
                   ]
@@ -87,26 +35,26 @@
           "locations": [
             {
               "message": {
-                "text": "// 1. Test that the function ambrosia returns the correct output when given a positive integer input.\n               assert(ambrosia(5) == 6)  \n            \n// 2. Test that the function ambrosia throws an IllegalArgumentException when given a negative integer input.\n               assertThrows[IllegalArgumentException] {\n  ambrosia(-5)\n}  \n            \n// 3. Test that the function ambrosia returns the correct output when given a zero input.\n               assert(ambrosia(0) == 1)  \n            "
+                "text": ""
               },
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "src/main/scala/example/Example.scala"
+                  "uri": "src/main/scala/Main.scala"
                 },
                 "region": {
                   "snippet": {
-                    "text": "// 1. Test that the function ambrosia returns the correct output when given a positive integer input.\n               assert(ambrosia(5) == 6)  \n            \n// 2. Test that the function ambrosia throws an IllegalArgumentException when given a negative integer input.\n               assertThrows[IllegalArgumentException] {\n  ambrosia(-5)\n}  \n            \n// 3. Test that the function ambrosia returns the correct output when given a zero input.\n               assert(ambrosia(0) == 1)  \n            "
+                    "text": ""
                   },
-                  "startColumn": 70,
+                  "startColumn": 151,
                   "startLine": 5
                 }
               }
             }
           ],
           "message": {
-            "text": "Coverage report can be improved"
+            "text": "Test coverage can be improved"
           },
-          "ruleId": "a6efe55a-ec2b-41a8-abec-54949ba15772"
+          "ruleId": "fc2858cd-1083-469b-b0a7-13d7d22b9af7"
         },
         {
           "baselineState": "new",
@@ -115,16 +63,16 @@
               "artifactChanges": [
                 {
                   "artifactLocation": {
-                    "uri": "src/main/scala/example/Example.scala"
+                    "uri": "src/main/scala/api/Server.scala"
                   },
                   "replacements": [
                     {
                       "deletedRegion": {
-                        "startColumn": 157,
-                        "startLine": 10
+                        "startColumn": 453,
+                        "startLine": 19
                       },
                       "insertedContent": {
-                        "text": "// 1. Test that the function \"ejemplo\" returns an integer value\n               assert(ejemplo.isInstanceOf[Int])  \n            \n// 2. Test that calling the function \"ejemplo\" with a negative integer argument throws an exception\n               assertThrows[IllegalArgumentException] {\n  ejemplo(-1)\n}  \n            "
+                        "text": ""
                       }
                     }
                   ]
@@ -139,26 +87,26 @@
           "locations": [
             {
               "message": {
-                "text": "// 1. Test that the function \"ejemplo\" returns an integer value\n               assert(ejemplo.isInstanceOf[Int])  \n            \n// 2. Test that calling the function \"ejemplo\" with a negative integer argument throws an exception\n               assertThrows[IllegalArgumentException] {\n  ejemplo(-1)\n}  \n            "
+                "text": ""
               },
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "src/main/scala/example/Example.scala"
+                  "uri": "src/main/scala/api/Server.scala"
                 },
                 "region": {
                   "snippet": {
-                    "text": "// 1. Test that the function \"ejemplo\" returns an integer value\n               assert(ejemplo.isInstanceOf[Int])  \n            \n// 2. Test that calling the function \"ejemplo\" with a negative integer argument throws an exception\n               assertThrows[IllegalArgumentException] {\n  ejemplo(-1)\n}  \n            "
+                    "text": ""
                   },
-                  "startColumn": 157,
-                  "startLine": 10
+                  "startColumn": 453,
+                  "startLine": 19
                 }
               }
             }
           ],
           "message": {
-            "text": "Coverage report can be improved"
+            "text": "Test coverage can be improved"
           },
-          "ruleId": "ee115e28-b007-423e-96db-590360a4f0ac"
+          "ruleId": "212bb677-621a-474a-963c-70037fb51d4b"
         },
         {
           "baselineState": "new",
@@ -167,16 +115,16 @@
               "artifactChanges": [
                 {
                   "artifactLocation": {
-                    "uri": "src/main/scala/example/ScalaFix2.scala"
+                    "uri": "src/main/scala/api/Routes.scala"
                   },
                   "replacements": [
                     {
                       "deletedRegion": {
-                        "startColumn": 110,
-                        "startLine": 10
+                        "startColumn": 659,
+                        "startLine": 21
                       },
                       "insertedContent": {
-                        "text": "// 1. Test that the method m2() is called\n               // Arrange\nval mockedObject = mock[SomeClass]\n\n// Act\nmockedObject.m2()\n\n// Assert\nverify(mockedObject, times(1)).m2()  \n            \n// 2. Test that the println statement in m2() is executed\n               // Arrange\nval mockedPrintStream = mock[PrintStream]\nSystem.setOut(mockedPrintStream)\n\n// Act\nSomeClass.m2()\n\n// Assert\nverify(mockedPrintStream, times(1)).println(\"Foo\")  \n            \n// 3. Test that an exception is thrown when m2() is called with invalid input\n               // Arrange\nval mockedObject = mock[SomeClass]\n\n// Act & Assert\nassertThrows[IllegalArgumentException] {\n  mockedObject.m2(\"invalid input\")\n}  \n            "
+                        "text": "                // 1. Test that the `_routes` function returns an `HttpRoutes` object.\n               val routes = _routes\nassert(routes.isInstanceOf[HttpRoutes[F]])  \n                // 2. Test that the `_routes` function handles a POST request to the \"/webhook\" endpoint.\n               val request = Request[F](Method.POST, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.Ok)  \n                // 3. Test that the `_routes` function returns a 404 response for a GET request to the \"/webhook\" endpoint.\n               val request = Request[F](Method.GET, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.NotFound)  "
                       }
                     }
                   ]
@@ -191,26 +139,26 @@
           "locations": [
             {
               "message": {
-                "text": "// 1. Test that the method m2() is called\n               // Arrange\nval mockedObject = mock[SomeClass]\n\n// Act\nmockedObject.m2()\n\n// Assert\nverify(mockedObject, times(1)).m2()  \n            \n// 2. Test that the println statement in m2() is executed\n               // Arrange\nval mockedPrintStream = mock[PrintStream]\nSystem.setOut(mockedPrintStream)\n\n// Act\nSomeClass.m2()\n\n// Assert\nverify(mockedPrintStream, times(1)).println(\"Foo\")  \n            \n// 3. Test that an exception is thrown when m2() is called with invalid input\n               // Arrange\nval mockedObject = mock[SomeClass]\n\n// Act & Assert\nassertThrows[IllegalArgumentException] {\n  mockedObject.m2(\"invalid input\")\n}  \n            "
+                "text": "                // 1. Test that the `_routes` function returns an `HttpRoutes` object.\n               val routes = _routes\nassert(routes.isInstanceOf[HttpRoutes[F]])  \n                // 2. Test that the `_routes` function handles a POST request to the \"/webhook\" endpoint.\n               val request = Request[F](Method.POST, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.Ok)  \n                // 3. Test that the `_routes` function returns a 404 response for a GET request to the \"/webhook\" endpoint.\n               val request = Request[F](Method.GET, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.NotFound)  "
               },
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "src/main/scala/example/ScalaFix2.scala"
+                  "uri": "src/main/scala/api/Routes.scala"
                 },
                 "region": {
                   "snippet": {
-                    "text": "// 1. Test that the method m2() is called\n               // Arrange\nval mockedObject = mock[SomeClass]\n\n// Act\nmockedObject.m2()\n\n// Assert\nverify(mockedObject, times(1)).m2()  \n            \n// 2. Test that the println statement in m2() is executed\n               // Arrange\nval mockedPrintStream = mock[PrintStream]\nSystem.setOut(mockedPrintStream)\n\n// Act\nSomeClass.m2()\n\n// Assert\nverify(mockedPrintStream, times(1)).println(\"Foo\")  \n            \n// 3. Test that an exception is thrown when m2() is called with invalid input\n               // Arrange\nval mockedObject = mock[SomeClass]\n\n// Act & Assert\nassertThrows[IllegalArgumentException] {\n  mockedObject.m2(\"invalid input\")\n}  \n            "
+                    "text": "                // 1. Test that the `_routes` function returns an `HttpRoutes` object.\n               val routes = _routes\nassert(routes.isInstanceOf[HttpRoutes[F]])  \n                // 2. Test that the `_routes` function handles a POST request to the \"/webhook\" endpoint.\n               val request = Request[F](Method.POST, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.Ok)  \n                // 3. Test that the `_routes` function returns a 404 response for a GET request to the \"/webhook\" endpoint.\n               val request = Request[F](Method.GET, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.NotFound)  "
                   },
-                  "startColumn": 110,
-                  "startLine": 10
+                  "startColumn": 659,
+                  "startLine": 21
                 }
               }
             }
           ],
           "message": {
-            "text": "Coverage report can be improved"
+            "text": "Test coverage can be improved"
           },
-          "ruleId": "020d90c0-0dfb-4ac5-9f85-d43a64e56bb2"
+          "ruleId": "b50bc3a3-4000-408f-8781-561dd2bb8d4a"
         },
         {
           "baselineState": "new",
@@ -219,16 +167,16 @@
               "artifactChanges": [
                 {
                   "artifactLocation": {
-                    "uri": "src/main/scala/other/example/FunctionsWithStrings.scala"
+                    "uri": "src/main/scala/api/Routes.scala"
                   },
                   "replacements": [
                     {
                       "deletedRegion": {
-                        "startColumn": 302,
-                        "startLine": 15
+                        "startColumn": 732,
+                        "startLine": 24
                       },
                       "insertedContent": {
-                        "text": "// 1. Test that the function returns an empty string when given an empty list\n               assert(findShortestString(List()) == \"\")  \n            \n// 2. Test that the function returns the shortest string in a list of strings\n               assert(findShortestString(List(\"apple\", \"banana\", \"pear\")) == \"pear\")  \n            \n// 3. Test that the function returns the first shortest string in a list of strings with multiple shortest strings\n               assert(findShortestString(List(\"cat\", \"dog\", \"rat\", \"bat\")) == \"cat\")  \n            \n// 4. Test that the function returns the only string in a list with one string\n               assert(findShortestString(List(\"hello\")) == \"hello\")  \n            \n// 5. Test that the function returns the shortest string in a list with strings of equal length\n               assert(findShortestString(List(\"car\", \"bus\", \"van\")) == \"car\")  \n            "
+                        "text": "                // 1. Test: Ensure that the `routes` method returns an instance of `HttpRoutes[F]`\n               // Code snippet\nval result = routes\nassert(result.isInstanceOf[HttpRoutes[F]])  \n                // 2. Test: Ensure that the `_routes` method is called within the `routes` method\n               // Code snippet\nval mock = mockFunction[Unit]\nval obj = new MyClass {\n  override def _routes: HttpRoutes[F] = {\n    mock()\n    HttpRoutes.empty\n  }\n}\nobj.routes\nmock.verify()  \n                // 3. Test: Ensure that the `m` method is called with the `_routes` method as an argument\n               // Code snippet\nval mock = mockFunction[HttpRoutes[F], HttpRoutes[F]]\nval obj = new MyClass {\n  override def _routes: HttpRoutes[F] = HttpRoutes.empty\n}\nmock.expects(obj._routes).returns(HttpRoutes.empty)\nobj.routes  "
                       }
                     }
                   ]
@@ -243,26 +191,144 @@
           "locations": [
             {
               "message": {
-                "text": "// 1. Test that the function returns an empty string when given an empty list\n               assert(findShortestString(List()) == \"\")  \n            \n// 2. Test that the function returns the shortest string in a list of strings\n               assert(findShortestString(List(\"apple\", \"banana\", \"pear\")) == \"pear\")  \n            \n// 3. Test that the function returns the first shortest string in a list of strings with multiple shortest strings\n               assert(findShortestString(List(\"cat\", \"dog\", \"rat\", \"bat\")) == \"cat\")  \n            \n// 4. Test that the function returns the only string in a list with one string\n               assert(findShortestString(List(\"hello\")) == \"hello\")  \n            \n// 5. Test that the function returns the shortest string in a list with strings of equal length\n               assert(findShortestString(List(\"car\", \"bus\", \"van\")) == \"car\")  \n            "
+                "text": "                // 1. Test: Ensure that the `routes` method returns an instance of `HttpRoutes[F]`\n               // Code snippet\nval result = routes\nassert(result.isInstanceOf[HttpRoutes[F]])  \n                // 2. Test: Ensure that the `_routes` method is called within the `routes` method\n               // Code snippet\nval mock = mockFunction[Unit]\nval obj = new MyClass {\n  override def _routes: HttpRoutes[F] = {\n    mock()\n    HttpRoutes.empty\n  }\n}\nobj.routes\nmock.verify()  \n                // 3. Test: Ensure that the `m` method is called with the `_routes` method as an argument\n               // Code snippet\nval mock = mockFunction[HttpRoutes[F], HttpRoutes[F]]\nval obj = new MyClass {\n  override def _routes: HttpRoutes[F] = HttpRoutes.empty\n}\nmock.expects(obj._routes).returns(HttpRoutes.empty)\nobj.routes  "
               },
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "src/main/scala/other/example/FunctionsWithStrings.scala"
+                  "uri": "src/main/scala/api/Routes.scala"
                 },
                 "region": {
                   "snippet": {
-                    "text": "// 1. Test that the function returns an empty string when given an empty list\n               assert(findShortestString(List()) == \"\")  \n            \n// 2. Test that the function returns the shortest string in a list of strings\n               assert(findShortestString(List(\"apple\", \"banana\", \"pear\")) == \"pear\")  \n            \n// 3. Test that the function returns the first shortest string in a list of strings with multiple shortest strings\n               assert(findShortestString(List(\"cat\", \"dog\", \"rat\", \"bat\")) == \"cat\")  \n            \n// 4. Test that the function returns the only string in a list with one string\n               assert(findShortestString(List(\"hello\")) == \"hello\")  \n            \n// 5. Test that the function returns the shortest string in a list with strings of equal length\n               assert(findShortestString(List(\"car\", \"bus\", \"van\")) == \"car\")  \n            "
+                    "text": "                // 1. Test: Ensure that the `routes` method returns an instance of `HttpRoutes[F]`\n               // Code snippet\nval result = routes\nassert(result.isInstanceOf[HttpRoutes[F]])  \n                // 2. Test: Ensure that the `_routes` method is called within the `routes` method\n               // Code snippet\nval mock = mockFunction[Unit]\nval obj = new MyClass {\n  override def _routes: HttpRoutes[F] = {\n    mock()\n    HttpRoutes.empty\n  }\n}\nobj.routes\nmock.verify()  \n                // 3. Test: Ensure that the `m` method is called with the `_routes` method as an argument\n               // Code snippet\nval mock = mockFunction[HttpRoutes[F], HttpRoutes[F]]\nval obj = new MyClass {\n  override def _routes: HttpRoutes[F] = HttpRoutes.empty\n}\nmock.expects(obj._routes).returns(HttpRoutes.empty)\nobj.routes  "
                   },
-                  "startColumn": 302,
-                  "startLine": 15
+                  "startColumn": 732,
+                  "startLine": 24
                 }
               }
             }
           ],
           "message": {
-            "text": "Coverage report can be improved"
+            "text": "Test coverage can be improved"
           },
-          "ruleId": "2294067c-28f7-404c-97f0-cb54ce97c9e0"
+          "ruleId": "dfb32261-ebd7-4445-8a52-ad97cf1a748c"
+        },
+        {
+          "baselineState": "new",
+          "fixes": [
+            {
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "src/main/scala/api/Middleware.scala"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startColumn": 1095,
+                        "startLine": 36
+                      },
+                      "insertedContent": {
+                        "text": "                // 1. Test that the function returns a Response with status code 500 and the error message when given a Throwable with a message.\n               val throwable = new Throwable(\"Test error message\")\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Test error message\")  \n                // 2. Test that the function logs the error message when given a Throwable with a message.\n               val throwable = new Throwable(\"Test error message\")\ninternalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Test error message\")  \n                // 3. Test that the function returns a Response with status code 500 and a generic error message when given a Throwable without a message.\n               val throwable = new Throwable()\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Internal server error\")  \n                // 4. Test that the function logs a generic error message when given a Throwable without a message.\n               val throwable = new Throwable()\ninternalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Internal server error\")  "
+                      }
+                    }
+                  ]
+                }
+              ],
+              "description": {
+                "text": "Add tests"
+              }
+            }
+          ],
+          "level": "note",
+          "locations": [
+            {
+              "message": {
+                "text": "                // 1. Test that the function returns a Response with status code 500 and the error message when given a Throwable with a message.\n               val throwable = new Throwable(\"Test error message\")\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Test error message\")  \n                // 2. Test that the function logs the error message when given a Throwable with a message.\n               val throwable = new Throwable(\"Test error message\")\ninternalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Test error message\")  \n                // 3. Test that the function returns a Response with status code 500 and a generic error message when given a Throwable without a message.\n               val throwable = new Throwable()\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Internal server error\")  \n                // 4. Test that the function logs a generic error message when given a Throwable without a message.\n               val throwable = new Throwable()\ninternalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Internal server error\")  "
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/scala/api/Middleware.scala"
+                },
+                "region": {
+                  "snippet": {
+                    "text": "                // 1. Test that the function returns a Response with status code 500 and the error message when given a Throwable with a message.\n               val throwable = new Throwable(\"Test error message\")\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Test error message\")  \n                // 2. Test that the function logs the error message when given a Throwable with a message.\n               val throwable = new Throwable(\"Test error message\")\ninternalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Test error message\")  \n                // 3. Test that the function returns a Response with status code 500 and a generic error message when given a Throwable without a message.\n               val throwable = new Throwable()\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Internal server error\")  \n                // 4. Test that the function logs a generic error message when given a Throwable without a message.\n               val throwable = new Throwable()\ninternalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Internal server error\")  "
+                  },
+                  "startColumn": 1095,
+                  "startLine": 36
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Test coverage can be improved"
+          },
+          "ruleId": "9d600271-bc99-4dd5-b5cd-f2133dab22a8"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "events/src/main/scala/github/GitHubService.scala"
+                },
+                "region": {
+                  "snippet": {
+                    "text": "case false if res.status.code == 422 =>"
+                  },
+                  "startColumn": 45,
+                  "startLine": 56
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Use === instead of =="
+          },
+          "ruleId": "786e2c62-f225-4fe5-9579-e76498327798"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "events/src/main/scala/github/GitHubService.scala"
+                },
+                "region": {
+                  "snippet": {
+                    "text": "case false if res.status.code == 404 =>"
+                  },
+                  "startColumn": 45,
+                  "startLine": 79
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Use === instead of =="
+          },
+          "ruleId": "b303cb64-a5e8-4a61-b6f6-69a8b915c713"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "events/src/main/scala/github/GitHubService.scala"
+                },
+                "region": {
+                  "startColumn": 45,
+                  "startLine": 56
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "use === instead of =="
+          },
+          "ruleId": "DisableSyntaxNoUniversalEquality"
         }
       ],
       "tool": {
@@ -274,57 +340,90 @@
           "rules": [
             {
               "help": {
-                "markdown": "                1. Test: Check if the function `m` returns a list with the expected values\n                ```scala\n                val result = m()\nassert(result == List(2, 3, 4))\n                ```\n                2. Test: Check if the function `m` returns a list with the same length as the input list\n                ```scala\n                val input = List(1, 2, 3)\nval result = m()\nassert(result.length == input.length)\n                ```\n                3. Test: Check if the function `m` returns an empty list when the input list is empty\n                ```scala\n                val input = List.empty[Int]\nval result = m()\nassert(result.isEmpty)\n                ```\n                4. Test: Check if the function `m` returns a list with the expected values when the input list contains negative numbers\n                ```scala\n                val input = List(-1, -2, -3)\nval result = m()\nassert(result == List(0, -1, -2))\n                ```",
-                "text": "Coverage report can be improved"
+                "markdown": "",
+                "text": "Test coverage can be improved"
               },
-              "id": "a0487c67-69fe-400a-9336-350512134a36",
-              "name": "Coverage report can be improved",
+              "id": "fc2858cd-1083-469b-b0a7-13d7d22b9af7",
+              "name": "Test coverage can be improved",
               "shortDescription": {
                 "text": "Coverage report can be improved"
               }
             },
             {
               "help": {
-                "markdown": "1. Test that the function ambrosia returns the correct output when given a positive integer input.\n```scala\nassert(ambrosia(5) == 6)\n```\n                2. Test that the function ambrosia throws an IllegalArgumentException when given a negative integer input.\n                ```scala\n                assertThrows[IllegalArgumentException] {\n  ambrosia(-5)\n}\n                ```\n3. Test that the function ambrosia returns the correct output when given a zero input.\n```scala\nassert(ambrosia(0) == 1)\n```",
-                "text": "Coverage report can be improved"
+                "markdown": "",
+                "text": "Test coverage can be improved"
               },
-              "id": "a6efe55a-ec2b-41a8-abec-54949ba15772",
-              "name": "Coverage report can be improved",
+              "id": "212bb677-621a-474a-963c-70037fb51d4b",
+              "name": "Test coverage can be improved",
               "shortDescription": {
                 "text": "Coverage report can be improved"
               }
             },
             {
               "help": {
-                "markdown": "1. Test that the function \"ejemplo\" returns an integer value\n```scala\nassert(ejemplo.isInstanceOf[Int])\n```\n                2. Test that calling the function \"ejemplo\" with a negative integer argument throws an exception\n                ```scala\n                assertThrows[IllegalArgumentException] {\n  ejemplo(-1)\n}\n                ```",
-                "text": "Coverage report can be improved"
+                "markdown": "                1. Test that the `_routes` function returns an `HttpRoutes` object.\n                ```scala\n                val routes = _routes\nassert(routes.isInstanceOf[HttpRoutes[F]])\n                ```\n                2. Test that the `_routes` function handles a POST request to the \"/webhook\" endpoint.\n                ```scala\n                val request = Request[F](Method.POST, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.Ok)\n                ```\n                3. Test that the `_routes` function returns a 404 response for a GET request to the \"/webhook\" endpoint.\n                ```scala\n                val request = Request[F](Method.GET, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.NotFound)\n                ```",
+                "text": "Test coverage can be improved"
               },
-              "id": "ee115e28-b007-423e-96db-590360a4f0ac",
-              "name": "Coverage report can be improved",
+              "id": "b50bc3a3-4000-408f-8781-561dd2bb8d4a",
+              "name": "Test coverage can be improved",
               "shortDescription": {
                 "text": "Coverage report can be improved"
               }
             },
             {
               "help": {
-                "markdown": "                1. Test that the method m2() is called\n                ```scala\n                // Arrange\nval mockedObject = mock[SomeClass]\n\n// Act\nmockedObject.m2()\n\n// Assert\nverify(mockedObject, times(1)).m2()\n                ```\n                2. Test that the println statement in m2() is executed\n                ```scala\n                // Arrange\nval mockedPrintStream = mock[PrintStream]\nSystem.setOut(mockedPrintStream)\n\n// Act\nSomeClass.m2()\n\n// Assert\nverify(mockedPrintStream, times(1)).println(\"Foo\")\n                ```\n                3. Test that an exception is thrown when m2() is called with invalid input\n                ```scala\n                // Arrange\nval mockedObject = mock[SomeClass]\n\n// Act & Assert\nassertThrows[IllegalArgumentException] {\n  mockedObject.m2(\"invalid input\")\n}\n                ```",
-                "text": "Coverage report can be improved"
+                "markdown": "                1. Test: Ensure that the `routes` method returns an instance of `HttpRoutes[F]`\n                ```scala\n                // Code snippet\nval result = routes\nassert(result.isInstanceOf[HttpRoutes[F]])\n                ```\n                2. Test: Ensure that the `_routes` method is called within the `routes` method\n                ```scala\n                // Code snippet\nval mock = mockFunction[Unit]\nval obj = new MyClass {\n  override def _routes: HttpRoutes[F] = {\n    mock()\n    HttpRoutes.empty\n  }\n}\nobj.routes\nmock.verify()\n                ```\n                3. Test: Ensure that the `m` method is called with the `_routes` method as an argument\n                ```scala\n                // Code snippet\nval mock = mockFunction[HttpRoutes[F], HttpRoutes[F]]\nval obj = new MyClass {\n  override def _routes: HttpRoutes[F] = HttpRoutes.empty\n}\nmock.expects(obj._routes).returns(HttpRoutes.empty)\nobj.routes\n                ```",
+                "text": "Test coverage can be improved"
               },
-              "id": "020d90c0-0dfb-4ac5-9f85-d43a64e56bb2",
-              "name": "Coverage report can be improved",
+              "id": "dfb32261-ebd7-4445-8a52-ad97cf1a748c",
+              "name": "Test coverage can be improved",
               "shortDescription": {
                 "text": "Coverage report can be improved"
               }
             },
             {
               "help": {
-                "markdown": "1. Test that the function returns an empty string when given an empty list\n```scala\nassert(findShortestString(List()) == \"\")\n```\n2. Test that the function returns the shortest string in a list of strings\n```scala\nassert(findShortestString(List(\"apple\", \"banana\", \"pear\")) == \"pear\")\n```\n3. Test that the function returns the first shortest string in a list of strings with multiple shortest strings\n```scala\nassert(findShortestString(List(\"cat\", \"dog\", \"rat\", \"bat\")) == \"cat\")\n```\n4. Test that the function returns the only string in a list with one string\n```scala\nassert(findShortestString(List(\"hello\")) == \"hello\")\n```\n5. Test that the function returns the shortest string in a list with strings of equal length\n```scala\nassert(findShortestString(List(\"car\", \"bus\", \"van\")) == \"car\")\n```",
-                "text": "Coverage report can be improved"
+                "markdown": "                1. Test that the function returns a Response with status code 500 and the error message when given a Throwable with a message.\n                ```scala\n                val throwable = new Throwable(\"Test error message\")\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Test error message\")\n                ```\n                2. Test that the function logs the error message when given a Throwable with a message.\n                ```scala\n                val throwable = new Throwable(\"Test error message\")\ninternalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Test error message\")\n                ```\n                3. Test that the function returns a Response with status code 500 and a generic error message when given a Throwable without a message.\n                ```scala\n                val throwable = new Throwable()\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Internal server error\")\n                ```\n                4. Test that the function logs a generic error message when given a Throwable without a message.\n                ```scala\n                val throwable = new Throwable()\ninternalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Internal server error\")\n                ```",
+                "text": "Test coverage can be improved"
               },
-              "id": "2294067c-28f7-404c-97f0-cb54ce97c9e0",
-              "name": "Coverage report can be improved",
+              "id": "9d600271-bc99-4dd5-b5cd-f2133dab22a8",
+              "name": "Test coverage can be improved",
               "shortDescription": {
                 "text": "Coverage report can be improved"
+              }
+            },
+            {
+              "help": {
+                "markdown": "### Explanation\nIn Scala, == is used for value comparison while === is used for reference comparison. In this case, we want to compare the value of res.status.code with 422, so we need to use === instead of ==.\n\n### Fixed code\n```scala\ncase false if res.status.code === 422 =>\n```",
+                "text": "In Scala, == is used for value comparison while === is used for reference comparison. In this case, we want to compare the value of res.status.code with 422, so we need to use === instead of ==."
+              },
+              "id": "786e2c62-f225-4fe5-9579-e76498327798",
+              "name": "Error in file events/src/main/scala/github/GitHubService.scala",
+              "shortDescription": {
+                "text": "Use === instead of =="
+              }
+            },
+            {
+              "help": {
+                "markdown": "### Explanation\nIn Scala, == is used for value comparison while === is used for reference comparison. In this case, we want to compare the value of res.status.code with 404, so we need to use === instead of ==.\n\n### Fixed code\n```scala\ncase false if res.status.code === 404 =>\n```",
+                "text": "In Scala, == is used for value comparison while === is used for reference comparison. In this case, we want to compare the value of res.status.code with 404, so we need to use === instead of ==."
+              },
+              "id": "b303cb64-a5e8-4a61-b6f6-69a8b915c713",
+              "name": "Error in file events/src/main/scala/github/GitHubService.scala",
+              "shortDescription": {
+                "text": "Use === instead of =="
+              }
+            },
+            {
+              "help": {
+                "markdown": "                ### Why this is a problem\n                Using == instead of === can lead to unexpected behavior in Scala codebases, as == performs reference equality instead of value equality. This can lead to bugs that are difficult to track down.\n                \n                ### General pattern to fix this class of problems\n                Replace all instances of == with === in the affected code.\n                \n                This is an example of code with this problem:\n                \n                ```scala\n                val x = 5\nval y = 5\nif (x == y) println(\"Equal\")\n                ```\n                \n                and this is how is looks after the fix is applied:\n                \n                ```scala\n                import cats.implicits._\nval x = 5\nval y = 5\nif (x === y) println(\"Equal\")\n                ```\n                \n                ### How to avoid this problem in the future\n                Always use === instead of == when comparing values in Scala codebases.",
+                "text": "Why this is a problem: Using == instead of === can lead to unexpected behavior in Scala codebases, as == performs reference equality instead of value equality. This can lead to bugs that are difficult to track down.\nGeneral pattern to fix: Replace all instances of == with === in the affected code.\nHow to avoid in the future: Always use === instead of == when comparing values in Scala codebases."
+              },
+              "id": "DisableSyntaxNoUniversalEquality",
+              "name": "Error in file events/src/main/scala/github/GitHubService.scala",
+              "shortDescription": {
+                "text": "use === instead of =="
               }
             }
           ],
