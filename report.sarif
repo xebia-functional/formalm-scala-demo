@@ -25,7 +25,7 @@
           "message": {
             "text": "mutable state should be avoided"
           },
-          "ruleId": "9e41dd6a-e3dc-4911-9a7d-3f78804098ff"
+          "ruleId": "e8257971-a9e2-4136-ad85-f5050c730fb6"
         },
         {
           "level": "error",
@@ -48,7 +48,27 @@
           "message": {
             "text": "null should be avoided, consider using Option instead"
           },
-          "ruleId": "e9a8a3be-f621-4cf4-8c7c-016d14d13961"
+          "ruleId": "060b5d97-1ea0-4f8f-80a3-1075951f9f3a"
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/src/main/scala/other/example/FunctionsWithStrings.scala"
+                },
+                "region": {
+                  "startColumn": 7,
+                  "startLine": 6
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "return should be avoided, consider using if/else instead"
+          },
+          "ruleId": "Unknown"
         }
       ],
       "tool": {
@@ -63,7 +83,7 @@
                 "markdown": "### Explanation\nUsing var makes the variable mutable which can lead to unexpected behavior. Changing it to val makes it immutable.\n\n### Fixed code\n```scala\nval x: Int = 0\n```",
                 "text": "Using var makes the variable mutable which can lead to unexpected behavior. Changing it to val makes it immutable."
               },
-              "id": "9e41dd6a-e3dc-4911-9a7d-3f78804098ff",
+              "id": "e8257971-a9e2-4136-ad85-f5050c730fb6",
               "name": "Error in file /src/main/scala/example/ScalaFix.scala",
               "shortDescription": {
                 "text": "mutable state should be avoided"
@@ -71,13 +91,24 @@
             },
             {
               "help": {
-                "markdown": "### Explanation\nUsing null can lead to NullPointerExceptions. Using Option instead ensures that the value is either Some(value) or None.\n\n### Fixed code\n```scala\nval y: Option[String] = None\n```",
-                "text": "Using null can lead to NullPointerExceptions. Using Option instead ensures that the value is either Some(value) or None."
+                "markdown": "### Explanation\nUsing null can lead to NullPointerExceptions. Using Option instead ensures that the value is either Some or None, avoiding null altogether.\n\n### Fixed code\n```scala\nval y: Option[String] = None\n```",
+                "text": "Using null can lead to NullPointerExceptions. Using Option instead ensures that the value is either Some or None, avoiding null altogether."
               },
-              "id": "e9a8a3be-f621-4cf4-8c7c-016d14d13961",
+              "id": "060b5d97-1ea0-4f8f-80a3-1075951f9f3a",
               "name": "Error in file /src/main/scala/example/ScalaFix.scala",
               "shortDescription": {
                 "text": "null should be avoided, consider using Option instead"
+              }
+            },
+            {
+              "help": {
+                "markdown": "### Why this is a problem\nThe use of 'return' should be avoided in Scala codebases as it can lead to StackOverflowErrors. Instead, 'if/else' statements should be used.\n\n### General pattern to fix this class of problems\nReplace 'return' statements with 'if/else' statements.\n\nThis is an example of code with this problem:\n\n```scala\nretry(100000)(a => if(a == 0) return None else return Some(a - 1))\n```\n\nand this is how is looks after the fix is applied:\n\n```scala\nretryTailRecM(100000)(a => if(a == 0) None else Some(a - 1))\n```\n\n### How to avoid this problem in the future\nUse tailRecM instead of recursion to avoid StackOverflowErrors. Avoid using 'return' statements and use 'if/else' statements instead.",
+                "text": "Why this is a problem: The use of 'return' should be avoided in Scala codebases as it can lead to StackOverflowErrors. Instead, 'if/else' statements should be used.\nGeneral pattern to fix: Replace 'return' statements with 'if/else' statements.\nHow to avoid in the future: Use tailRecM instead of recursion to avoid StackOverflowErrors. Avoid using 'return' statements and use 'if/else' statements instead."
+              },
+              "id": "Unknown",
+              "name": "Error in file /src/main/scala/other/example/FunctionsWithStrings.scala",
+              "shortDescription": {
+                "text": "return should be avoided, consider using if/else instead"
               }
             }
           ],
