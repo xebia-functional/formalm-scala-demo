@@ -16,11 +16,11 @@
                   "replacements": [
                     {
                       "deletedRegion": {
-                        "startColumn": 108,
-                        "startLine": 7
+                        "startColumn": 171,
+                        "startLine": 12
                       },
                       "insertedContent": {
-                        "text": "// 1. Test: Check if variable y is null\n               assert(y == null)  \n            \n// 2. Test: Check if variable y is not empty\n               assert(y != \"\")  \n            \n// 3. Test: Check if variable y is of type String\n               assert(y.isInstanceOf[String])  \n            "
+                        "text": "// 1. Test: Check if the function `m` returns a list with the expected values\n               val result = m()\nassert(result == List(2, 3, 4))  \n            \n// 2. Test: Check if the function `m` returns a list with the same length as the input list\n               val input = List(1, 2, 3)\nval result = m()\nassert(result.length == input.length)  \n            \n// 3. Test: Check if the function `m` returns an empty list when the input list is empty\n               val input = List.empty[Int]\nval result = m()\nassert(result.isEmpty)  \n            \n// 4. Test: Check if the function `m` returns a list with the expected values when the input list contains negative numbers\n               val input = List(-1, -2, -3)\nval result = m()\nassert(result == List(0, -1, -2))  \n            "
                       }
                     }
                   ]
@@ -35,7 +35,7 @@
           "locations": [
             {
               "message": {
-                "text": "// 1. Test: Check if variable y is null\n               assert(y == null)  \n            \n// 2. Test: Check if variable y is not empty\n               assert(y != \"\")  \n            \n// 3. Test: Check if variable y is of type String\n               assert(y.isInstanceOf[String])  \n            "
+                "text": "// 1. Test: Check if the function `m` returns a list with the expected values\n               val result = m()\nassert(result == List(2, 3, 4))  \n            \n// 2. Test: Check if the function `m` returns a list with the same length as the input list\n               val input = List(1, 2, 3)\nval result = m()\nassert(result.length == input.length)  \n            \n// 3. Test: Check if the function `m` returns an empty list when the input list is empty\n               val input = List.empty[Int]\nval result = m()\nassert(result.isEmpty)  \n            \n// 4. Test: Check if the function `m` returns a list with the expected values when the input list contains negative numbers\n               val input = List(-1, -2, -3)\nval result = m()\nassert(result == List(0, -1, -2))  \n            "
               },
               "physicalLocation": {
                 "artifactLocation": {
@@ -43,18 +43,18 @@
                 },
                 "region": {
                   "snippet": {
-                    "text": "// 1. Test: Check if variable y is null\n               assert(y == null)  \n            \n// 2. Test: Check if variable y is not empty\n               assert(y != \"\")  \n            \n// 3. Test: Check if variable y is of type String\n               assert(y.isInstanceOf[String])  \n            "
+                    "text": "// 1. Test: Check if the function `m` returns a list with the expected values\n               val result = m()\nassert(result == List(2, 3, 4))  \n            \n// 2. Test: Check if the function `m` returns a list with the same length as the input list\n               val input = List(1, 2, 3)\nval result = m()\nassert(result.length == input.length)  \n            \n// 3. Test: Check if the function `m` returns an empty list when the input list is empty\n               val input = List.empty[Int]\nval result = m()\nassert(result.isEmpty)  \n            \n// 4. Test: Check if the function `m` returns a list with the expected values when the input list contains negative numbers\n               val input = List(-1, -2, -3)\nval result = m()\nassert(result == List(0, -1, -2))  \n            "
                   },
-                  "startColumn": 108,
-                  "startLine": 7
+                  "startColumn": 171,
+                  "startLine": 12
                 }
               }
             }
           ],
           "message": {
-            "text": "There are some tests that can be written for this code."
+            "text": "Coverage report can be improved"
           },
-          "ruleId": "test-coverage"
+          "ruleId": "a0487c67-69fe-400a-9336-350512134a36"
         },
         {
           "baselineState": "new",
@@ -63,16 +63,16 @@
               "artifactChanges": [
                 {
                   "artifactLocation": {
-                    "uri": "src/main/scala/example/ScalaFix.scala"
+                    "uri": "src/main/scala/example/Example.scala"
                   },
                   "replacements": [
                     {
                       "deletedRegion": {
-                        "startColumn": 88,
-                        "startLine": 6
+                        "startColumn": 70,
+                        "startLine": 5
                       },
                       "insertedContent": {
-                        "text": "// 1. Test that variable x is initialized to 0\n               assert(x == 0)  \n            \n// 2. Test that variable x can be assigned a new value\n               x = 5\nassert(x == 5)  \n            \n// 3. Test that variable x cannot be assigned a non-integer value\n               assertDoesNotCompile(\"x = \\\"hello\\\"\")  \n            "
+                        "text": "// 1. Test that the function ambrosia returns the correct output when given a positive integer input.\n               assert(ambrosia(5) == 6)  \n            \n// 2. Test that the function ambrosia throws an IllegalArgumentException when given a negative integer input.\n               assertThrows[IllegalArgumentException] {\n  ambrosia(-5)\n}  \n            \n// 3. Test that the function ambrosia returns the correct output when given a zero input.\n               assert(ambrosia(0) == 1)  \n            "
                       }
                     }
                   ]
@@ -87,26 +87,182 @@
           "locations": [
             {
               "message": {
-                "text": "// 1. Test that variable x is initialized to 0\n               assert(x == 0)  \n            \n// 2. Test that variable x can be assigned a new value\n               x = 5\nassert(x == 5)  \n            \n// 3. Test that variable x cannot be assigned a non-integer value\n               assertDoesNotCompile(\"x = \\\"hello\\\"\")  \n            "
+                "text": "// 1. Test that the function ambrosia returns the correct output when given a positive integer input.\n               assert(ambrosia(5) == 6)  \n            \n// 2. Test that the function ambrosia throws an IllegalArgumentException when given a negative integer input.\n               assertThrows[IllegalArgumentException] {\n  ambrosia(-5)\n}  \n            \n// 3. Test that the function ambrosia returns the correct output when given a zero input.\n               assert(ambrosia(0) == 1)  \n            "
               },
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "src/main/scala/example/ScalaFix.scala"
+                  "uri": "src/main/scala/example/Example.scala"
                 },
                 "region": {
                   "snippet": {
-                    "text": "// 1. Test that variable x is initialized to 0\n               assert(x == 0)  \n            \n// 2. Test that variable x can be assigned a new value\n               x = 5\nassert(x == 5)  \n            \n// 3. Test that variable x cannot be assigned a non-integer value\n               assertDoesNotCompile(\"x = \\\"hello\\\"\")  \n            "
+                    "text": "// 1. Test that the function ambrosia returns the correct output when given a positive integer input.\n               assert(ambrosia(5) == 6)  \n            \n// 2. Test that the function ambrosia throws an IllegalArgumentException when given a negative integer input.\n               assertThrows[IllegalArgumentException] {\n  ambrosia(-5)\n}  \n            \n// 3. Test that the function ambrosia returns the correct output when given a zero input.\n               assert(ambrosia(0) == 1)  \n            "
                   },
-                  "startColumn": 88,
-                  "startLine": 6
+                  "startColumn": 70,
+                  "startLine": 5
                 }
               }
             }
           ],
           "message": {
-            "text": "There are some tests that can be written for this code."
+            "text": "Coverage report can be improved"
           },
-          "ruleId": "test-coverage-81"
+          "ruleId": "a6efe55a-ec2b-41a8-abec-54949ba15772"
+        },
+        {
+          "baselineState": "new",
+          "fixes": [
+            {
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "src/main/scala/example/Example.scala"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startColumn": 157,
+                        "startLine": 10
+                      },
+                      "insertedContent": {
+                        "text": "// 1. Test that the function \"ejemplo\" returns an integer value\n               assert(ejemplo.isInstanceOf[Int])  \n            \n// 2. Test that calling the function \"ejemplo\" with a negative integer argument throws an exception\n               assertThrows[IllegalArgumentException] {\n  ejemplo(-1)\n}  \n            "
+                      }
+                    }
+                  ]
+                }
+              ],
+              "description": {
+                "text": "Add tests"
+              }
+            }
+          ],
+          "level": "note",
+          "locations": [
+            {
+              "message": {
+                "text": "// 1. Test that the function \"ejemplo\" returns an integer value\n               assert(ejemplo.isInstanceOf[Int])  \n            \n// 2. Test that calling the function \"ejemplo\" with a negative integer argument throws an exception\n               assertThrows[IllegalArgumentException] {\n  ejemplo(-1)\n}  \n            "
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/scala/example/Example.scala"
+                },
+                "region": {
+                  "snippet": {
+                    "text": "// 1. Test that the function \"ejemplo\" returns an integer value\n               assert(ejemplo.isInstanceOf[Int])  \n            \n// 2. Test that calling the function \"ejemplo\" with a negative integer argument throws an exception\n               assertThrows[IllegalArgumentException] {\n  ejemplo(-1)\n}  \n            "
+                  },
+                  "startColumn": 157,
+                  "startLine": 10
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Coverage report can be improved"
+          },
+          "ruleId": "ee115e28-b007-423e-96db-590360a4f0ac"
+        },
+        {
+          "baselineState": "new",
+          "fixes": [
+            {
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "src/main/scala/example/ScalaFix2.scala"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startColumn": 110,
+                        "startLine": 10
+                      },
+                      "insertedContent": {
+                        "text": "// 1. Test that the method m2() is called\n               // Arrange\nval mockedObject = mock[SomeClass]\n\n// Act\nmockedObject.m2()\n\n// Assert\nverify(mockedObject, times(1)).m2()  \n            \n// 2. Test that the println statement in m2() is executed\n               // Arrange\nval mockedPrintStream = mock[PrintStream]\nSystem.setOut(mockedPrintStream)\n\n// Act\nSomeClass.m2()\n\n// Assert\nverify(mockedPrintStream, times(1)).println(\"Foo\")  \n            \n// 3. Test that an exception is thrown when m2() is called with invalid input\n               // Arrange\nval mockedObject = mock[SomeClass]\n\n// Act & Assert\nassertThrows[IllegalArgumentException] {\n  mockedObject.m2(\"invalid input\")\n}  \n            "
+                      }
+                    }
+                  ]
+                }
+              ],
+              "description": {
+                "text": "Add tests"
+              }
+            }
+          ],
+          "level": "note",
+          "locations": [
+            {
+              "message": {
+                "text": "// 1. Test that the method m2() is called\n               // Arrange\nval mockedObject = mock[SomeClass]\n\n// Act\nmockedObject.m2()\n\n// Assert\nverify(mockedObject, times(1)).m2()  \n            \n// 2. Test that the println statement in m2() is executed\n               // Arrange\nval mockedPrintStream = mock[PrintStream]\nSystem.setOut(mockedPrintStream)\n\n// Act\nSomeClass.m2()\n\n// Assert\nverify(mockedPrintStream, times(1)).println(\"Foo\")  \n            \n// 3. Test that an exception is thrown when m2() is called with invalid input\n               // Arrange\nval mockedObject = mock[SomeClass]\n\n// Act & Assert\nassertThrows[IllegalArgumentException] {\n  mockedObject.m2(\"invalid input\")\n}  \n            "
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/scala/example/ScalaFix2.scala"
+                },
+                "region": {
+                  "snippet": {
+                    "text": "// 1. Test that the method m2() is called\n               // Arrange\nval mockedObject = mock[SomeClass]\n\n// Act\nmockedObject.m2()\n\n// Assert\nverify(mockedObject, times(1)).m2()  \n            \n// 2. Test that the println statement in m2() is executed\n               // Arrange\nval mockedPrintStream = mock[PrintStream]\nSystem.setOut(mockedPrintStream)\n\n// Act\nSomeClass.m2()\n\n// Assert\nverify(mockedPrintStream, times(1)).println(\"Foo\")  \n            \n// 3. Test that an exception is thrown when m2() is called with invalid input\n               // Arrange\nval mockedObject = mock[SomeClass]\n\n// Act & Assert\nassertThrows[IllegalArgumentException] {\n  mockedObject.m2(\"invalid input\")\n}  \n            "
+                  },
+                  "startColumn": 110,
+                  "startLine": 10
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Coverage report can be improved"
+          },
+          "ruleId": "020d90c0-0dfb-4ac5-9f85-d43a64e56bb2"
+        },
+        {
+          "baselineState": "new",
+          "fixes": [
+            {
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "src/main/scala/other/example/FunctionsWithStrings.scala"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startColumn": 302,
+                        "startLine": 15
+                      },
+                      "insertedContent": {
+                        "text": "// 1. Test that the function returns an empty string when given an empty list\n               assert(findShortestString(List()) == \"\")  \n            \n// 2. Test that the function returns the shortest string in a list of strings\n               assert(findShortestString(List(\"apple\", \"banana\", \"pear\")) == \"pear\")  \n            \n// 3. Test that the function returns the first shortest string in a list of strings with multiple shortest strings\n               assert(findShortestString(List(\"cat\", \"dog\", \"rat\", \"bat\")) == \"cat\")  \n            \n// 4. Test that the function returns the only string in a list with one string\n               assert(findShortestString(List(\"hello\")) == \"hello\")  \n            \n// 5. Test that the function returns the shortest string in a list with strings of equal length\n               assert(findShortestString(List(\"car\", \"bus\", \"van\")) == \"car\")  \n            "
+                      }
+                    }
+                  ]
+                }
+              ],
+              "description": {
+                "text": "Add tests"
+              }
+            }
+          ],
+          "level": "note",
+          "locations": [
+            {
+              "message": {
+                "text": "// 1. Test that the function returns an empty string when given an empty list\n               assert(findShortestString(List()) == \"\")  \n            \n// 2. Test that the function returns the shortest string in a list of strings\n               assert(findShortestString(List(\"apple\", \"banana\", \"pear\")) == \"pear\")  \n            \n// 3. Test that the function returns the first shortest string in a list of strings with multiple shortest strings\n               assert(findShortestString(List(\"cat\", \"dog\", \"rat\", \"bat\")) == \"cat\")  \n            \n// 4. Test that the function returns the only string in a list with one string\n               assert(findShortestString(List(\"hello\")) == \"hello\")  \n            \n// 5. Test that the function returns the shortest string in a list with strings of equal length\n               assert(findShortestString(List(\"car\", \"bus\", \"van\")) == \"car\")  \n            "
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/scala/other/example/FunctionsWithStrings.scala"
+                },
+                "region": {
+                  "snippet": {
+                    "text": "// 1. Test that the function returns an empty string when given an empty list\n               assert(findShortestString(List()) == \"\")  \n            \n// 2. Test that the function returns the shortest string in a list of strings\n               assert(findShortestString(List(\"apple\", \"banana\", \"pear\")) == \"pear\")  \n            \n// 3. Test that the function returns the first shortest string in a list of strings with multiple shortest strings\n               assert(findShortestString(List(\"cat\", \"dog\", \"rat\", \"bat\")) == \"cat\")  \n            \n// 4. Test that the function returns the only string in a list with one string\n               assert(findShortestString(List(\"hello\")) == \"hello\")  \n            \n// 5. Test that the function returns the shortest string in a list with strings of equal length\n               assert(findShortestString(List(\"car\", \"bus\", \"van\")) == \"car\")  \n            "
+                  },
+                  "startColumn": 302,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Coverage report can be improved"
+          },
+          "ruleId": "2294067c-28f7-404c-97f0-cb54ce97c9e0"
         }
       ],
       "tool": {
@@ -117,11 +273,58 @@
           "organization": "Xebia Functional",
           "rules": [
             {
-              "id": "test-coverage-81",
-              "name": "Test Coverage",
               "help": {
-                "text": "This rule checks if the code has been tested for all possible scenarios.",
-                "markdown": "```scala\n// This is a comment\nval x = 1\nassert(x == 1)\n```"
+                "markdown": "                1. Test: Check if the function `m` returns a list with the expected values\n                ```scala\n                val result = m()\nassert(result == List(2, 3, 4))\n                ```\n                2. Test: Check if the function `m` returns a list with the same length as the input list\n                ```scala\n                val input = List(1, 2, 3)\nval result = m()\nassert(result.length == input.length)\n                ```\n                3. Test: Check if the function `m` returns an empty list when the input list is empty\n                ```scala\n                val input = List.empty[Int]\nval result = m()\nassert(result.isEmpty)\n                ```\n                4. Test: Check if the function `m` returns a list with the expected values when the input list contains negative numbers\n                ```scala\n                val input = List(-1, -2, -3)\nval result = m()\nassert(result == List(0, -1, -2))\n                ```",
+                "text": "Coverage report can be improved"
+              },
+              "id": "a0487c67-69fe-400a-9336-350512134a36",
+              "name": "Coverage report can be improved",
+              "shortDescription": {
+                "text": "Coverage report can be improved"
+              }
+            },
+            {
+              "help": {
+                "markdown": "1. Test that the function ambrosia returns the correct output when given a positive integer input.\n```scala\nassert(ambrosia(5) == 6)\n```\n                2. Test that the function ambrosia throws an IllegalArgumentException when given a negative integer input.\n                ```scala\n                assertThrows[IllegalArgumentException] {\n  ambrosia(-5)\n}\n                ```\n3. Test that the function ambrosia returns the correct output when given a zero input.\n```scala\nassert(ambrosia(0) == 1)\n```",
+                "text": "Coverage report can be improved"
+              },
+              "id": "a6efe55a-ec2b-41a8-abec-54949ba15772",
+              "name": "Coverage report can be improved",
+              "shortDescription": {
+                "text": "Coverage report can be improved"
+              }
+            },
+            {
+              "help": {
+                "markdown": "1. Test that the function \"ejemplo\" returns an integer value\n```scala\nassert(ejemplo.isInstanceOf[Int])\n```\n                2. Test that calling the function \"ejemplo\" with a negative integer argument throws an exception\n                ```scala\n                assertThrows[IllegalArgumentException] {\n  ejemplo(-1)\n}\n                ```",
+                "text": "Coverage report can be improved"
+              },
+              "id": "ee115e28-b007-423e-96db-590360a4f0ac",
+              "name": "Coverage report can be improved",
+              "shortDescription": {
+                "text": "Coverage report can be improved"
+              }
+            },
+            {
+              "help": {
+                "markdown": "                1. Test that the method m2() is called\n                ```scala\n                // Arrange\nval mockedObject = mock[SomeClass]\n\n// Act\nmockedObject.m2()\n\n// Assert\nverify(mockedObject, times(1)).m2()\n                ```\n                2. Test that the println statement in m2() is executed\n                ```scala\n                // Arrange\nval mockedPrintStream = mock[PrintStream]\nSystem.setOut(mockedPrintStream)\n\n// Act\nSomeClass.m2()\n\n// Assert\nverify(mockedPrintStream, times(1)).println(\"Foo\")\n                ```\n                3. Test that an exception is thrown when m2() is called with invalid input\n                ```scala\n                // Arrange\nval mockedObject = mock[SomeClass]\n\n// Act & Assert\nassertThrows[IllegalArgumentException] {\n  mockedObject.m2(\"invalid input\")\n}\n                ```",
+                "text": "Coverage report can be improved"
+              },
+              "id": "020d90c0-0dfb-4ac5-9f85-d43a64e56bb2",
+              "name": "Coverage report can be improved",
+              "shortDescription": {
+                "text": "Coverage report can be improved"
+              }
+            },
+            {
+              "help": {
+                "markdown": "1. Test that the function returns an empty string when given an empty list\n```scala\nassert(findShortestString(List()) == \"\")\n```\n2. Test that the function returns the shortest string in a list of strings\n```scala\nassert(findShortestString(List(\"apple\", \"banana\", \"pear\")) == \"pear\")\n```\n3. Test that the function returns the first shortest string in a list of strings with multiple shortest strings\n```scala\nassert(findShortestString(List(\"cat\", \"dog\", \"rat\", \"bat\")) == \"cat\")\n```\n4. Test that the function returns the only string in a list with one string\n```scala\nassert(findShortestString(List(\"hello\")) == \"hello\")\n```\n5. Test that the function returns the shortest string in a list with strings of equal length\n```scala\nassert(findShortestString(List(\"car\", \"bus\", \"van\")) == \"car\")\n```",
+                "text": "Coverage report can be improved"
+              },
+              "id": "2294067c-28f7-404c-97f0-cb54ce97c9e0",
+              "name": "Coverage report can be improved",
+              "shortDescription": {
+                "text": "Coverage report can be improved"
               }
             }
           ],
