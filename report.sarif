@@ -395,7 +395,7 @@
             },
             {
               "help": {
-                "markdown": "### Explanation\nIn Scala, == is used for value comparison while === is used for reference comparison. In this case, we need to use === to compare the status code with 422.\n\n### Fixed code\n```scala\ncase false if res.status.code === 422 =>\n```",
+                "markdown": "\n### Explanation\nIn Scala, == is used for value comparison while === is used for reference comparison. In this case, we need to use === to compare the status code with 422.\n\n### Fixed code\n```scala\ncase false if res.status.code === 422 =>\n```",
                 "text": "In Scala, == is used for value comparison while === is used for reference comparison. In this case, we need to use === to compare the status code with 422."
               },
               "id": "d3c58ddc-74e8-454e-845b-85bf6aeae096",
@@ -406,7 +406,7 @@
             },
             {
               "help": {
-                "markdown": "### Explanation\nIn Scala, == is used for value comparison while === is used for reference comparison. In this case, we need to use === to compare the status code with 404.\n\n### Fixed code\n```scala\ncase false if res.status.code === 404 =>\n```",
+                "markdown": "     ### Explanation\nIn Scala, == is used for value comparison while === is used for reference comparison. In this case, we need to use === to compare the status code with 404.\n\n### Fixed code\n```scala\ncase false if res.status.code === 404 =>\n```",
                 "text": "In Scala, == is used for value comparison while === is used for reference comparison. In this case, we need to use === to compare the status code with 404."
               },
               "id": "b4e9b54c-02c4-4f28-98ae-94f691b54916",
