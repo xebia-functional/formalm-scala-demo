@@ -54,7 +54,7 @@
           "message": {
             "text": "Test coverage can be improved"
           },
-          "ruleId": "a65c443a-f568-4fba-8bd1-acb640debb72"
+          "ruleId": "a8378d1a-f5d4-4101-ade4-4175342c54fc"
         },
         {
           "baselineState": "new",
@@ -106,7 +106,7 @@
           "message": {
             "text": "Test coverage can be improved"
           },
-          "ruleId": "ac4a24d2-9531-4f9c-a64a-d626e0845b83"
+          "ruleId": "0a4c03a9-298a-4524-89fa-09bdf09c9e11"
         },
         {
           "baselineState": "new",
@@ -124,7 +124,7 @@
                         "startLine": 21
                       },
                       "insertedContent": {
-                        "text": "// 1. Test that the `_routes` function returns an `HttpRoutes` object.\\nval routes = _routes\nassert(routes.isInstanceOf[HttpRoutes[F]])\\n\n// 2. Test that the `_routes` function handles a POST request to the \"/webhook\" endpoint.\\nval request = Request[F](Method.POST, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.Ok)\\n\n// 3. Test that the `_routes` function returns a 404 response for a GET request to the \"/webhook\" endpoint.\\nval request = Request[F](Method.GET, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.NotFound)\\n"
+                        "text": "// 1. Test that the `_routes` function returns an `HttpRoutes` object\\nval routes = _routes\nassert(routes.isInstanceOf[HttpRoutes[F]])\\n\n// 2. Test that the `_routes` function handles a POST request to the \"/webhook\" endpoint\\nval request = Request[F](Method.POST, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.Ok)\\n\n// 3. Test that the `_routes` function returns a 404 response for a GET request to the \"/webhook\" endpoint\\nval request = Request[F](Method.GET, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.NotFound)\\n"
                       }
                     }
                   ]
@@ -139,7 +139,7 @@
           "locations": [
             {
               "message": {
-                "text": "// 1. Test that the `_routes` function returns an `HttpRoutes` object.\\nval routes = _routes\nassert(routes.isInstanceOf[HttpRoutes[F]])\\n\n// 2. Test that the `_routes` function handles a POST request to the \"/webhook\" endpoint.\\nval request = Request[F](Method.POST, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.Ok)\\n\n// 3. Test that the `_routes` function returns a 404 response for a GET request to the \"/webhook\" endpoint.\\nval request = Request[F](Method.GET, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.NotFound)\\n"
+                "text": "// 1. Test that the `_routes` function returns an `HttpRoutes` object\\nval routes = _routes\nassert(routes.isInstanceOf[HttpRoutes[F]])\\n\n// 2. Test that the `_routes` function handles a POST request to the \"/webhook\" endpoint\\nval request = Request[F](Method.POST, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.Ok)\\n\n// 3. Test that the `_routes` function returns a 404 response for a GET request to the \"/webhook\" endpoint\\nval request = Request[F](Method.GET, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.NotFound)\\n"
               },
               "physicalLocation": {
                 "artifactLocation": {
@@ -147,7 +147,7 @@
                 },
                 "region": {
                   "snippet": {
-                    "text": "// 1. Test that the `_routes` function returns an `HttpRoutes` object.\\nval routes = _routes\nassert(routes.isInstanceOf[HttpRoutes[F]])\\n\n// 2. Test that the `_routes` function handles a POST request to the \"/webhook\" endpoint.\\nval request = Request[F](Method.POST, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.Ok)\\n\n// 3. Test that the `_routes` function returns a 404 response for a GET request to the \"/webhook\" endpoint.\\nval request = Request[F](Method.GET, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.NotFound)\\n"
+                    "text": "// 1. Test that the `_routes` function returns an `HttpRoutes` object\\nval routes = _routes\nassert(routes.isInstanceOf[HttpRoutes[F]])\\n\n// 2. Test that the `_routes` function handles a POST request to the \"/webhook\" endpoint\\nval request = Request[F](Method.POST, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.Ok)\\n\n// 3. Test that the `_routes` function returns a 404 response for a GET request to the \"/webhook\" endpoint\\nval request = Request[F](Method.GET, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.NotFound)\\n"
                   },
                   "startColumn": 659,
                   "startLine": 21
@@ -158,7 +158,7 @@
           "message": {
             "text": "Test coverage can be improved"
           },
-          "ruleId": "8a868d8b-28c6-48d5-a572-b9c6282b4adc"
+          "ruleId": "61d69ceb-6837-4feb-9ee5-c86cd3061c5c"
         },
         {
           "baselineState": "new",
@@ -210,7 +210,7 @@
           "message": {
             "text": "Test coverage can be improved"
           },
-          "ruleId": "0472b28f-9bf3-4da3-b4f7-4a613aaa874a"
+          "ruleId": "91c2b4e4-d80f-498f-b184-d8431a6b1f81"
         },
         {
           "baselineState": "new",
@@ -228,7 +228,7 @@
                         "startLine": 36
                       },
                       "insertedContent": {
-                        "text": "// 1. Test that the function returns a Response with status code 500 and the error message when given a Throwable with a message.\\nval throwable = new Throwable(\"Test error message\")\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Test error message\")\\n\n// 2. Test that the function logs the error message when given a Throwable with a message.\\nval throwable = new Throwable(\"Test error message\")\ninternalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Test error message\")\\n\n// 3. Test that the function returns a Response with status code 500 and a generic error message when given a Throwable without a message.\\nval throwable = new Throwable()\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Internal server error\")\\n\n// 4. Test that the function logs a generic error message when given a Throwable without a message.\\nval throwable = new Throwable()\ninternalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Internal server error\")\\n"
+                        "text": "// 1. Test that the function returns a Response with status code 500 and the error message when given a Throwable with a message.\\nval throwable = new Throwable(\"Test error message\")\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Test error message\")\\n\n// 2. Test that the function logs the error message when given a Throwable with a message.\\nval throwable = new Throwable(\"Test error message\")\nval response = internalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Test error message\")\\n\n// 3. Test that the function returns a Response with status code 500 and a generic error message when given a Throwable without a message.\\nval throwable = new Throwable()\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Internal server error\")\\n\n// 4. Test that the function logs a generic error message when given a Throwable without a message.\\nval throwable = new Throwable()\nval response = internalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Internal server error\")\\n"
                       }
                     }
                   ]
@@ -243,7 +243,7 @@
           "locations": [
             {
               "message": {
-                "text": "// 1. Test that the function returns a Response with status code 500 and the error message when given a Throwable with a message.\\nval throwable = new Throwable(\"Test error message\")\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Test error message\")\\n\n// 2. Test that the function logs the error message when given a Throwable with a message.\\nval throwable = new Throwable(\"Test error message\")\ninternalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Test error message\")\\n\n// 3. Test that the function returns a Response with status code 500 and a generic error message when given a Throwable without a message.\\nval throwable = new Throwable()\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Internal server error\")\\n\n// 4. Test that the function logs a generic error message when given a Throwable without a message.\\nval throwable = new Throwable()\ninternalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Internal server error\")\\n"
+                "text": "// 1. Test that the function returns a Response with status code 500 and the error message when given a Throwable with a message.\\nval throwable = new Throwable(\"Test error message\")\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Test error message\")\\n\n// 2. Test that the function logs the error message when given a Throwable with a message.\\nval throwable = new Throwable(\"Test error message\")\nval response = internalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Test error message\")\\n\n// 3. Test that the function returns a Response with status code 500 and a generic error message when given a Throwable without a message.\\nval throwable = new Throwable()\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Internal server error\")\\n\n// 4. Test that the function logs a generic error message when given a Throwable without a message.\\nval throwable = new Throwable()\nval response = internalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Internal server error\")\\n"
               },
               "physicalLocation": {
                 "artifactLocation": {
@@ -251,7 +251,7 @@
                 },
                 "region": {
                   "snippet": {
-                    "text": "// 1. Test that the function returns a Response with status code 500 and the error message when given a Throwable with a message.\\nval throwable = new Throwable(\"Test error message\")\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Test error message\")\\n\n// 2. Test that the function logs the error message when given a Throwable with a message.\\nval throwable = new Throwable(\"Test error message\")\ninternalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Test error message\")\\n\n// 3. Test that the function returns a Response with status code 500 and a generic error message when given a Throwable without a message.\\nval throwable = new Throwable()\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Internal server error\")\\n\n// 4. Test that the function logs a generic error message when given a Throwable without a message.\\nval throwable = new Throwable()\ninternalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Internal server error\")\\n"
+                    "text": "// 1. Test that the function returns a Response with status code 500 and the error message when given a Throwable with a message.\\nval throwable = new Throwable(\"Test error message\")\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Test error message\")\\n\n// 2. Test that the function logs the error message when given a Throwable with a message.\\nval throwable = new Throwable(\"Test error message\")\nval response = internalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Test error message\")\\n\n// 3. Test that the function returns a Response with status code 500 and a generic error message when given a Throwable without a message.\\nval throwable = new Throwable()\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Internal server error\")\\n\n// 4. Test that the function logs a generic error message when given a Throwable without a message.\\nval throwable = new Throwable()\nval response = internalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Internal server error\")\\n"
                   },
                   "startColumn": 1095,
                   "startLine": 36
@@ -262,7 +262,7 @@
           "message": {
             "text": "Test coverage can be improved"
           },
-          "ruleId": "e8699121-672a-4c2b-8f7b-64568ba63afc"
+          "ruleId": "f35c0981-eeeb-4fd3-a80f-f5ac56da3bb5"
         },
         {
           "level": "error",
@@ -285,7 +285,7 @@
           "message": {
             "text": "Use === instead of =="
           },
-          "ruleId": "6f47349c-c0c6-4977-afff-8a2e384a8214"
+          "ruleId": "43e8d46b-9390-4683-b739-6939215d2cdc"
         },
         {
           "level": "error",
@@ -308,7 +308,7 @@
           "message": {
             "text": "Use === instead of =="
           },
-          "ruleId": "f5edd520-7b69-4ee5-b3a6-54e666f5f535"
+          "ruleId": "8aca851e-07d7-4e50-82d1-b05c4a0aa91f"
         },
         {
           "level": "error",
@@ -343,7 +343,7 @@
                 "markdown": "",
                 "text": "Test coverage can be improved"
               },
-              "id": "a65c443a-f568-4fba-8bd1-acb640debb72",
+              "id": "a8378d1a-f5d4-4101-ade4-4175342c54fc",
               "name": "Test coverage can be improved",
               "shortDescription": {
                 "text": "Coverage report can be improved"
@@ -354,7 +354,7 @@
                 "markdown": "",
                 "text": "Test coverage can be improved"
               },
-              "id": "ac4a24d2-9531-4f9c-a64a-d626e0845b83",
+              "id": "0a4c03a9-298a-4524-89fa-09bdf09c9e11",
               "name": "Test coverage can be improved",
               "shortDescription": {
                 "text": "Coverage report can be improved"
@@ -362,10 +362,10 @@
             },
             {
               "help": {
-                "markdown": "\\n1. Test that the `_routes` function returns an `HttpRoutes` object.\\n```scala\\nval routes = _routes\nassert(routes.isInstanceOf[HttpRoutes[F]])\\n```\n\\n2. Test that the `_routes` function handles a POST request to the \"/webhook\" endpoint.\\n```scala\\nval request = Request[F](Method.POST, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.Ok)\\n```\n\\n3. Test that the `_routes` function returns a 404 response for a GET request to the \"/webhook\" endpoint.\\n```scala\\nval request = Request[F](Method.GET, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.NotFound)\\n```",
+                "markdown": "                    1. Test that the `_routes` function returns an `HttpRoutes` object\n                    ```scala\n                    val routes = _routes\nassert(routes.isInstanceOf[HttpRoutes[F]])\n                    ```\n                                        2. Test that the `_routes` function handles a POST request to the \"/webhook\" endpoint\n                    ```scala\n                    val request = Request[F](Method.POST, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.Ok)\n                    ```\n                                        3. Test that the `_routes` function returns a 404 response for a GET request to the \"/webhook\" endpoint\n                    ```scala\n                    val request = Request[F](Method.GET, Uri.uri(\"/webhook\"))\nval response = _routes.orNotFound(request).unsafeRunSync()\nassert(response.status == Status.NotFound)\n                    ```\n                    ",
                 "text": "Test coverage can be improved"
               },
-              "id": "8a868d8b-28c6-48d5-a572-b9c6282b4adc",
+              "id": "61d69ceb-6837-4feb-9ee5-c86cd3061c5c",
               "name": "Test coverage can be improved",
               "shortDescription": {
                 "text": "Coverage report can be improved"
@@ -373,10 +373,10 @@
             },
             {
               "help": {
-                "markdown": "\\n1. Test: Ensure that the `routes` method returns an instance of `HttpRoutes[F]`\\n```scala\\n// Code snippet\nval result = routes\nassert(result.isInstanceOf[HttpRoutes[F]])\\n```\n\\n2. Test: Ensure that the `routes` method calls the `m` function with the `_routes` parameter\\n```scala\\n// Code snippet\nval mockM = mockFunction[HttpRoutes[F], HttpRoutes[F]]\nval mockRoutes = mock[HttpRoutes[F]]\nmockM.expects(mockRoutes).returning(mockRoutes)\n\nval result = routes(mockM)\nverify(mockM).apply(_routes)\\n```\n\\n3. Test: Ensure that the `routes` method throws an exception if the `m` function returns `null`\\n```scala\\n// Code snippet\nval mockM = mockFunction[HttpRoutes[F], HttpRoutes[F]]\nval mockRoutes = mock[HttpRoutes[F]]\nmockM.expects(mockRoutes).returning(null)\n\nassertThrows[NullPointerException] {\n  routes(mockM)\n}\\n```",
+                "markdown": "                    1. Test: Ensure that the `routes` method returns an instance of `HttpRoutes[F]`\n                    ```scala\n                    // Code snippet\nval result = routes\nassert(result.isInstanceOf[HttpRoutes[F]])\n                    ```\n                                        2. Test: Ensure that the `routes` method calls the `m` function with the `_routes` parameter\n                    ```scala\n                    // Code snippet\nval mockM = mockFunction[HttpRoutes[F], HttpRoutes[F]]\nval mockRoutes = mock[HttpRoutes[F]]\nmockM.expects(mockRoutes).returning(mockRoutes)\n\nval result = routes(mockM)\nverify(mockM).apply(_routes)\n                    ```\n                                        3. Test: Ensure that the `routes` method throws an exception if the `m` function returns `null`\n                    ```scala\n                    // Code snippet\nval mockM = mockFunction[HttpRoutes[F], HttpRoutes[F]]\nval mockRoutes = mock[HttpRoutes[F]]\nmockM.expects(mockRoutes).returning(null)\n\nassertThrows[NullPointerException] {\n  routes(mockM)\n}\n                    ```\n                    ",
                 "text": "Test coverage can be improved"
               },
-              "id": "0472b28f-9bf3-4da3-b4f7-4a613aaa874a",
+              "id": "91c2b4e4-d80f-498f-b184-d8431a6b1f81",
               "name": "Test coverage can be improved",
               "shortDescription": {
                 "text": "Coverage report can be improved"
@@ -384,10 +384,10 @@
             },
             {
               "help": {
-                "markdown": "\\n1. Test that the function returns a Response with status code 500 and the error message when given a Throwable with a message.\\n```scala\\nval throwable = new Throwable(\"Test error message\")\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Test error message\")\\n```\n\\n2. Test that the function logs the error message when given a Throwable with a message.\\n```scala\\nval throwable = new Throwable(\"Test error message\")\ninternalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Test error message\")\\n```\n\\n3. Test that the function returns a Response with status code 500 and a generic error message when given a Throwable without a message.\\n```scala\\nval throwable = new Throwable()\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Internal server error\")\\n```\n\\n4. Test that the function logs a generic error message when given a Throwable without a message.\\n```scala\\nval throwable = new Throwable()\ninternalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Internal server error\")\\n```",
+                "markdown": "                    1. Test that the function returns a Response with status code 500 and the error message when given a Throwable with a message.\n                    ```scala\n                    val throwable = new Throwable(\"Test error message\")\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Test error message\")\n                    ```\n                                        2. Test that the function logs the error message when given a Throwable with a message.\n                    ```scala\n                    val throwable = new Throwable(\"Test error message\")\nval response = internalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Test error message\")\n                    ```\n                                        3. Test that the function returns a Response with status code 500 and a generic error message when given a Throwable without a message.\n                    ```scala\n                    val throwable = new Throwable()\nval response = internalServerError(throwable).unsafeRunSync()\nassert(response.status == Status.InternalServerError)\nassert(response.bodyText == \"Internal server error\")\n                    ```\n                                        4. Test that the function logs a generic error message when given a Throwable without a message.\n                    ```scala\n                    val throwable = new Throwable()\nval response = internalServerError(throwable).unsafeRunSync()\nverify(logger).error(\"Internal server error\")\n                    ```\n                    ",
                 "text": "Test coverage can be improved"
               },
-              "id": "e8699121-672a-4c2b-8f7b-64568ba63afc",
+              "id": "f35c0981-eeeb-4fd3-a80f-f5ac56da3bb5",
               "name": "Test coverage can be improved",
               "shortDescription": {
                 "text": "Coverage report can be improved"
@@ -398,7 +398,7 @@
                 "markdown": "### Explanation\nIn Scala, == is used for value comparison while === is used for reference comparison. In this case, we need to use === to compare the status code with 422.\n\n### Fixed code\n```scala\ncase false if res.status.code === 422 =>\n```",
                 "text": "In Scala, == is used for value comparison while === is used for reference comparison. In this case, we need to use === to compare the status code with 422."
               },
-              "id": "6f47349c-c0c6-4977-afff-8a2e384a8214",
+              "id": "43e8d46b-9390-4683-b739-6939215d2cdc",
               "name": "Error in file events/src/main/scala/github/GitHubService.scala",
               "shortDescription": {
                 "text": "Use === instead of =="
@@ -409,7 +409,7 @@
                 "markdown": "### Explanation\nIn Scala, == is used for value comparison while === is used for reference comparison. In this case, we need to use === to compare the status code with 404.\n\n### Fixed code\n```scala\ncase false if res.status.code === 404 =>\n```",
                 "text": "In Scala, == is used for value comparison while === is used for reference comparison. In this case, we need to use === to compare the status code with 404."
               },
-              "id": "f5edd520-7b69-4ee5-b3a6-54e666f5f535",
+              "id": "8aca851e-07d7-4e50-82d1-b05c4a0aa91f",
               "name": "Error in file events/src/main/scala/github/GitHubService.scala",
               "shortDescription": {
                 "text": "Use === instead of =="
@@ -417,8 +417,8 @@
             },
             {
               "help": {
-                "markdown": "### Why this is a problem\nUsing == instead of === in Scala codebases can lead to unexpected behavior due to the difference in type checking. == checks for value equality while === checks for both value and type equality.\n\n### General pattern to fix this class of problems\nReplace all instances of == with === in the codebase.\n\nThis is an example of code with this problem:\n\n```scala\nif (x == 1) { ... }\n```\n\nand this is how is looks after the fix is applied:\n\n```scala\nif (x === 1) { ... }\n```\n\n### How to avoid this problem in the future\nAlways use === instead of == when checking for equality in Scala codebases.",
-                "text": "Why this is a problem: Using == instead of === in Scala codebases can lead to unexpected behavior due to the difference in type checking. == checks for value equality while === checks for both value and type equality.\nGeneral pattern to fix: Replace all instances of == with === in the codebase.\nHow to avoid in the future: Always use === instead of == when checking for equality in Scala codebases."
+                "markdown": "                ### Why this is a problem\n                Using == instead of === can lead to unexpected behavior in Scala codebases, as == performs reference equality instead of value equality. This can lead to bugs that are difficult to track down.\n                \n                ### General pattern to fix this class of problems\n                Replace all instances of == with === in the affected code.\n                \n                This is an example of code with this problem:\n                \n                ```scala\n                val x = 5\nval y = 5\nif (x == y) println(\"Equal\")\n                ```\n                \n                and this is how is looks after the fix is applied:\n                \n                ```scala\n                import cats.implicits._\nval x = 5\nval y = 5\nif (x === y) println(\"Equal\")\n                ```\n                \n                ### How to avoid this problem in the future\n                Always use === instead of == when comparing values in Scala codebases.",
+                "text": "Why this is a problem: Using == instead of === can lead to unexpected behavior in Scala codebases, as == performs reference equality instead of value equality. This can lead to bugs that are difficult to track down.\nGeneral pattern to fix: Replace all instances of == with === in the affected code.\nHow to avoid in the future: Always use === instead of == when comparing values in Scala codebases."
               },
               "id": "DisableSyntaxNoUniversalEquality",
               "name": "Error in file events/src/main/scala/github/GitHubService.scala",
